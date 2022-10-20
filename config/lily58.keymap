@@ -35,7 +35,7 @@
     &kp LSHFT &kp Z  &kp X  &kp C    &kp V   &kp B &lt 3 LBKT        &kp RBKT &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp BSLH
 // |
 //
-   &lt 2 LALT &lt 1 LCTRL &kp LGUI  &kp BACKSPACE                 &mt SPACE LC(LS(LALT)) &kp ENTER  &lt 2 C_VOL_UP &lt 1 C_VOL_DN
+   &lt 2 LALT &lt 1 LCTRL &kp LGUI  &kp BACKSPACE                 &mt LC(LS(LALT)) SPACE &kp ENTER  &lt 2 C_VOL_UP &lt 1 C_VOL_DN
 			>;
 
 		};
