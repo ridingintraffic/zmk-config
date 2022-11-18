@@ -92,7 +92,7 @@
     &kp Q        &kp W        &kp E       &kp R         &kp T          &kp Y        &kp U     &kp I       &kp O         &kp P
     &kp A        &kp S        &kp D       &kp F         &kp G          &kp H        &kp J     &kp K       &kp L         &kp SEMI
     &kp Z        &kp X        &kp C       &kp V         &kp B          &kp N        &kp M     &kp COMMA   &kp DOT       &kp FSLH
-                        &lt 1 LALT    &kp LGUI  &kp BACKSPACE          &mt LC(LS(LALT)) SPACE &mt LSHIFT ENTER  &lt 2 C_VOL_UP
+                        &lt 1 LALT    &kp LGUI  &kp BACKSPACE          &mt LC(LS(LALT)) SPACE &mt LSHIFT ENTER  &lt 2 MINUS
             >;
         };
 

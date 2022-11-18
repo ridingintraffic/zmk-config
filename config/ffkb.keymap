@@ -56,7 +56,7 @@
 
     behaviors {
         hm: layer_mods {
-            compatible = "zmk,behavior-hold-tap";
+            compatible = "tap-preferred";
             label = "LAYER_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -70,7 +70,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             quick_tap_ms = <0>;
-            flavor = "tap_preferred";
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
     };
@@ -84,10 +84,10 @@
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp LC(RIGHT)  LC(LEFT) &inc_dec_kp LC(RIGHT)  LC(LEFT) >;
 
             bindings = <
-    &gresc     &kp Q        &kp W        &kp E       &kp R         &kp T                              &kp Y        &kp U     &kp I       &kp O         &kp P       &kp EQUAL
+    &gresc     &kp Q        &kp W        &kp E       &kp R         &kp T                              &kp Y        &kp U     &kp I       &kp O         &kp P       &kp MINUS
     &kp TAB  &kp A        &kp S        &kp D       &kp F         &kp G                &trans        &kp H        &kp J     &kp K       &kp L         &kp SEMI    &kp SINGLE_QUOTE
     &kp LSHIFT &kp Z        &kp X        &kp C       &kp V         &kp B                              &kp N        &kp M     &kp COMMA   &kp DOT       &kp FSLH    &kp BSLH
-                            &trans      &lt 1 LALT    &kp LGUI  &kp BACKSPACE                          &mt LC(LS(LALT)) SPACE &mt LSHIFT ENTER  &lt 2 C_VOL_UP     &trans
+                            &trans      &lt 1 LALT    &kp LGUI  &kp BACKSPACE                          &mt LC(LS(LALT)) SPACE &mt LSHIFT ENTER  &lt 2 MINUS     &trans
             >;
         };
 

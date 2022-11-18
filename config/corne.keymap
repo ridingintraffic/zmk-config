@@ -33,10 +33,10 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-&gresc   &kp Q  &kp W  &kp E    &kp R    &kp T                      &kp Y  &kp U    &kp I     &kp O   &kp P    &kp EQUAL
+&gresc   &kp Q  &kp W  &kp E    &kp R    &kp T                      &kp Y  &kp U    &kp I     &kp O   &kp P    &kp MINUS
 &kp TAB   &kp A  &kp S  &kp D    &kp F    &kp G                      &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SINGLE_QUOTE
 &kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B                     &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp BSLH
-                &lt 1 LCTRL &kp LGUI  &kp BACKSPACE             &mt LC(LS(LALT)) SPACE &mt LSHIFT ENTER &lt 2 RALT
+                &lt 1 LCTRL &kp LGUI  &kp BACKSPACE             &mt LC(LS(LALT)) SPACE &mt LSHIFT ENTER &lt 2 MINUS
                         >;
                 };
                 lower_layer {
@@ -46,7 +46,7 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4   &kp N5                 &kp N6      &kp N7    &kp N8    &kp N9   &kp N0   &kp MINUS
+&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4   &kp N5                 &kp N6      &kp N7    &kp N8    &kp N9   &kp N0   &kp EQUAL
 &kp GRAVE &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                &kp LEFT     &kp DOWN  &kp UP    &kp RIGHT  &trans   &kp TILDE
 &trans     &ext_power EP_ON &ext_power EP_OFF &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4)))   &trans    &trans   &kp C_PLAY_PAUSE   &trans    &kp MINUS &kp KP_PLUS     &kp LBRC  &kp RBRC  &kp PIPE
                                         &kp LCTL  &kp LALT &kp DELETE            &kp ENTER  &kp LC(LEFT)  &kp LC(RIGHT)
