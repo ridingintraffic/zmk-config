@@ -90,9 +90,9 @@
 
             bindings = <
     &kp Q        &kp W        &kp E       &kp R         &kp T          &kp Y        &kp U     &kp I       &kp O         &kp P
-    &kp A        &kp S        &kp D       &kp F         &kp G          &kp H        &kp J     &kp K       &kp L         &kp SEMI
+    &kp A        &kp S        &kp D       &hs LSHIFT F         &kp G          &kp H       &hs LSHIFT J     &kp K       &kp L         &kp SEMI
     &kp Z        &kp X        &kp C       &kp V         &kp B          &kp N        &kp M     &kp COMMA   &kp DOT       &kp FSLH
-                        &lt 1 LALT    &kp LGUI  &kp BACKSPACE          &mt LC(LS(LALT)) SPACE &mt LSHIFT ENTER  &lt 2 MINUS
+                        &lt 1 LALT    &kp LGUI  &kp BACKSPACE          &mt LC(LS(LALT)) SPACE &lt 3 ENTER  &lt 2 MINUS
             >;
         };
 
@@ -103,7 +103,7 @@
  &kp N1       &kp N2       &kp N3      &kp N4        &kp N5                            &kp N6          &kp N7           &kp N8        &kp N9      &kp N0
     &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                 &kp LEFT        &kp DOWN         &kp UP        &kp RIGHT   &kp PLUS
  &out OUT_USB  &out OUT_BLE       &trans      &trans        &trans                    &trans &trans  &trans &trans &trans
-                              &kp LCTL  &kp LALT  &kp DELETE      &mt SPACE LC(LS(LALT))   &kp LC(LEFT)    &kp LC(RIGHT)
+                              &kp LCTL  &kp LALT  &kp DELETE                &mt SPACE LC(LS(LALT))   &kp LC(LEFT)    &kp LC(RIGHT)
                >;
         };
 
@@ -112,6 +112,16 @@
 
             bindings = <
     &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT                                      &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR
+    &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                  &kp LEFT  &kp DOWN  &kp UP        &kp RIGHT   &kp PLUS
+    &out OUT_USB  &out OUT_BLE       &trans      &trans        &trans                  &trans &trans  &trans &trans
+                                    &trans        &kp LALT      &kp TAB        &kp LC(LEFT)   &kp LC(UP)    &kp LC(RIGHT)
+                >;
+        };
+        oth_layer {
+            label = "Other";
+
+            bindings = <
+    &gresc  &kp GRAVE &kp HASH &kp DOLLAR &kp PRCNT                                      &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR
     &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                  &kp LEFT  &kp DOWN  &kp UP        &kp RIGHT   &kp PLUS
     &out OUT_USB  &out OUT_BLE       &trans      &trans        &trans                  &trans &trans  &trans &trans
                                     &trans        &kp LALT      &kp TAB        &kp LC(LEFT)   &kp LC(UP)    &kp LC(RIGHT)
