@@ -122,7 +122,7 @@
             label = "Other";
 
             bindings = <
-    &gresc  &kp GRAVE &trans &trans &trans   &trans &trans &trans &trans &trans
+    &gresc  &kp GRAVE &kp TILDE &trans &trans   &trans &trans &trans &trans &trans
     &kp TAB &trans    &trans  &trans &trans  &trans &trans &trans &trans &trans
     &trans  &trans    &trans  &trans &trans  &trans &trans  &trans &trans &trans
             &trans    &trans   &trans        &trans &trans &trans
