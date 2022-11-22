@@ -101,10 +101,10 @@
             label = "Navigation";
 
             bindings = <
- &kp N1        &kp N2       &kp N3       &kp N4       &kp N5          &kp N6          &kp N7           &kp N8        &kp N9      &kp N0
- &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3    &kp LEFT        &kp DOWN         &kp UP        &kp RIGHT   &kp PLUS
- &out OUT_USB  &out OUT_BLE &trans       &trans       &kp LBKT        &kp RBKT  &kp MINUS  &kp EQUAL &kp SINGLE_QUOTE &kp BSLH
-            &kp LCTL  &kp LALT  &kp DELETE                            &mt SPACE LC(LS(LALT))   &kp LC(LEFT)    &kp LC(RIGHT)
+ &kp N1        &kp N2       &kp N3       &kp N4       &kp N5                      &kp N6    &kp N7        &kp N8        &kp N9           &kp N0
+ &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                &kp LEFT  &kp DOWN      &kp UP        &kp RIGHT        &kp PLUS
+ &out OUT_USB  &out OUT_BLE &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &kp LBKT        &kp RBKT  &kp MINUS     &kp EQUAL     &kp SINGLE_QUOTE &kp BSLH
+            &kp LCTL  &kp LALT  &kp DELETE                                        &mt SPACE LC(LS(LALT))  &kp LC(LEFT)  &kp LC(RIGHT)
                >;
         };
 
