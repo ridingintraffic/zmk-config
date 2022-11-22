@@ -6,9 +6,10 @@
 #define DEFAULT 0
 #define NAV     1
 #define SYM     2
+#define OTH     3
 
 #define TAPPING_TERM 250
-#define QUICK_TAP    150
+#define QUICK_TAP    100
 
 &lt {
 	flavor = "tap-preferred";
