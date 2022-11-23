@@ -1,0 +1,69 @@
+/*
+ * Copyright (c) 2022 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <dt-bindings/zmk/matrix_transform.h>
+
+&xiao_serial { status = "disabled"; };
+
+&xiao_spi {
+    status = "okay";
+    cs-gpios = <&xiao_d 6 GPIO_ACTIVE_LOW>;
+    shifter: 595@0 {
+        compatible = "zmk,gpio-595";
+        status = "okay";
+        gpio-controller;
+        spi-max-frequency = <200000>;
+        reg = <0>;
+        label = "74HC595";
+        #gpio-cells = <2>;
+        ngpios = <8>;
+    };
+};
+
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,matrix_transform = &default_transform;
+    };
+
+    default_transform: keymap_transform_0 {
+        compatible = "zmk,matrix-transform";
+        columns = <8>;
+        rows = <5>;
+
+        map = <
+            RC(0,0) RC(1,0) RC(2,0) RC(3,0) RC(4,0) RC(4,4) RC(3,4) RC(2,4) RC(1,4) RC(0,4)
+            RC(0,1) RC(1,1) RC(2,1) RC(3,1) RC(4,1) RC(4,5) RC(3,5) RC(2,5) RC(1,5) RC(0,5)
+            RC(0,2) RC(1,2) RC(2,2) RC(3,2) RC(4,2) RC(4,6) RC(3,6) RC(2,6) RC(1,6) RC(0,6)
+                            RC(2,3) RC(3,3) RC(4,3) RC(4,7) RC(3,7) RC(2,7)
+        >;
+    };
+
+    kscan0: kscan_0 {        
+        compatible = "zmk,kscan-gpio-matrix";
+        label = "KSCAN";
+        diode-direction = "col2row";
+
+        col-gpios
+            = <&shifter 0 GPIO_ACTIVE_HIGH>
+            , <&shifter 1 GPIO_ACTIVE_HIGH>
+            , <&shifter 2 GPIO_ACTIVE_HIGH>
+            , <&shifter 3 GPIO_ACTIVE_HIGH>
+            , <&shifter 4 GPIO_ACTIVE_HIGH>
+            , <&shifter 5 GPIO_ACTIVE_HIGH>
+            , <&shifter 6 GPIO_ACTIVE_HIGH>
+            , <&shifter 7 GPIO_ACTIVE_HIGH>
+            ;
+
+        row-gpios
+            = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&xiao_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ;
+    };
+};
