@@ -87,7 +87,7 @@
     &gresc     &kp Q        &kp W        &kp E       &kp R         &kp T                              &kp Y        &kp U     &kp I       &kp O         &kp P       &kp MINUS
     &kp TAB  &kp A        &kp S        &kp D       &hs LSHIFT F         &kp G                &trans        &kp H        &hs LSHIFT J     &kp K       &kp L         &kp SEMI    &kp SINGLE_QUOTE
     &kp LSHIFT &kp Z        &kp X        &kp C       &kp V         &kp B                              &kp N        &kp M     &kp COMMA   &kp DOT       &kp FSLH    &kp BSLH
-                            &trans      &lt 1 LALT    &kp LGUI  &kp BACKSPACE                          &mt LC(LS(LALT)) SPACE &mt LSHIFT ENTER  &lt 2 MINUS     &trans
+                            &trans      &lt 1 LALT    &kp LGUI  &kp BACKSPACE                          &mt LC(LS(LALT)) SPACE &lt 3 ENTER  &lt 2 MINUS     &trans
             >;
         };
 
@@ -112,6 +112,18 @@
     &kp GRAVE   &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT                                      &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR    &kp EQUAL
     &trans     &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3               &trans           &kp LEFT        &kp DOWN         &kp UP        &kp RIGHT   &kp PLUS    &trans
     &kp LSHIFT &out OUT_USB  &out OUT_BLE       &trans      &trans        &trans                                &rgb_ug RGB_TOG &rgb_ug RGB_EFR  &rgb_ug RGB_EFF &rgb_ug RGB_BRI &rgb_ug RGB_BRD     &trans
+                                        &trans      &trans        &kp LALT      &kp TAB        &kp LC(LEFT)   &kp LC(UP)    &kp LC(RIGHT)      &trans
+            >;
+        };
+    util_layer {
+            label = "Util";
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+
+            bindings = <
+    &kp GRAVE   &gresc &kp GRAVE &kp TILDE &kp DOLLAR &kp PRCNT                                      &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR    &kp EQUAL
+    &trans     &kp TAB    &trans  &trans  &trans  &trans               &trans           &kp LEFT        &kp DOWN         &kp UP        &kp RIGHT   &kp PLUS    &trans
+    &kp LSHIFT &trans   &trans       &trans      &trans       &bootloader                                &rgb_ug RGB_TOG &rgb_ug RGB_EFR  &rgb_ug RGB_EFF &rgb_ug RGB_BRI &rgb_ug RGB_BRD     &trans
                                         &trans      &trans        &kp LALT      &kp TAB        &kp LC(LEFT)   &kp LC(UP)    &kp LC(RIGHT)      &trans
             >;
         };

@@ -130,7 +130,7 @@
             bindings = <
     &gresc  &kp GRAVE &kp TILDE &trans &trans   &trans &trans &trans &trans &trans
     &kp TAB &trans    &trans  &trans &trans  &trans &trans &trans &trans &trans
-    &trans  &trans    &trans  &trans &trans  &trans &trans  &trans &trans &trans
+    &trans  &trans    &trans  &trans &bootloader  &trans &trans  &trans &trans &trans
             &trans    &kp LGUI  &trans        &trans &trans &trans
                 >;
         };

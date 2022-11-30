@@ -63,7 +63,7 @@ behaviors {
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤──────────╮   ╭──────────┤──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
     &kp LSHFT   &kp Z      &kp X      &kp C      &kp V      &kp B    &lt 3 LBKT     &kp RBKT     &kp N      &kp M   &kp COMMA    &kp DOT   &kp FSLH   &kp BSLH
 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤──────────╯   ╰──┤──────────────────┼─────────────────┼───────────────┼─────────┼──────────╯
-                      &lt 2 LALT &lt 1 LCTRL &kp LGUI  &kp BACKSPACE                &mt LC(LS(LALT)) SPACE &mt LSHIFT ENTER  &lt 2 MINUS  &lt 1 C_VOL_DN
+                      &lt 2 LALT &lt 1 LCTRL &kp LGUI  &kp BACKSPACE                &mt LC(LS(LALT)) SPACE &lt 3 ENTER  &lt 2 MINUS  &lt 1 C_VOL_DN
    //                ╰──────────┴───────────┴─────────┴─────────────╯                 ╰──────────────────┴─────────────────┴───────────────┴───────────────╯
 			>;
 
@@ -113,8 +113,8 @@ behaviors {
 			bindings = <
 &trans  &trans &trans &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &trans    &out OUT_USB    &out OUT_BLE    &trans    &trans   &trans    &trans
 &trans  &gresc  &kp GRAVE &kp TILDE &bt BT_SEL 3 &bt BT_SEL 4                       &kp N6      &kp N7    &kp N8    &kp N9   &kp N0    &trans
-&kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &trans      &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &trans
-&kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12   &trans   &trans    &kp KP_PLUS &kp MINUS &kp EQUAL &kp EQUAL &kp RBKT  &kp BSLH
+&kp F1    &kp TAB &kp F3 &kp F4  &kp F5  &kp F6                       &trans      &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &trans
+&kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12   &trans   &bootloader    &kp KP_PLUS &kp MINUS &kp EQUAL &kp EQUAL &kp RBKT  &kp BSLH
                         &trans  &trans  &trans    &trans   &trans    &trans      &trans    &trans
 			>;
 
