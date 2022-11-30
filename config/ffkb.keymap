@@ -123,7 +123,7 @@
             bindings = <
     &kp GRAVE   &gresc &kp GRAVE &kp TILDE &kp DOLLAR &kp PRCNT                                      &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR    &kp EQUAL
     &trans     &kp TAB    &trans  &trans  &trans  &trans               &trans           &kp LEFT        &kp DOWN         &kp UP        &kp RIGHT   &kp PLUS    &trans
-    &kp LSHIFT &trans   &trans       &trans      &trans       &bootloader                                &rgb_ug RGB_TOG &rgb_ug RGB_EFR  &rgb_ug RGB_EFF &rgb_ug RGB_BRI &rgb_ug RGB_BRD     &trans
+    &kp LSHIFT &trans   &trans       &trans      &trans       &bootloader                                &bootloader &rgb_ug RGB_EFR  &rgb_ug RGB_EFF &rgb_ug RGB_BRI &rgb_ug RGB_BRD     &trans
                                         &trans      &trans        &kp LALT      &kp TAB        &kp LC(LEFT)   &kp LC(UP)    &kp LC(RIGHT)      &trans
             >;
         };
