@@ -112,9 +112,9 @@
             label = "Symbols";
 
             bindings = <
-    &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT      &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR
-    &trans   &trans &trans   &trans     &trans         &trans    &trans    &trans          &trans    &trans
-    &trans   &trans &trans   &trans     &trans         &trans    &trans    &trans          &trans    &trans
+    &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT         &kp CARET &kp AMPS       &kp KP_MULTIPLY &kp LPAR           &kp RPAR
+    &trans   &trans &trans   &trans     &trans            &trans    &trans         &trans          &trans             &trans
+    &trans   &trans &trans   &trans     &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp UNDERSCORE &kp PLUS        &kp DOUBLE_QUOTES  &kp PIPE
             &trans        &trans       &trans          &trans &trans &trans
                 >;
         };
