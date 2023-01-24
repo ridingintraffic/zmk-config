@@ -89,7 +89,7 @@
                         bindings = <
 &trans  &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT  &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LPAR  &kp RPAR &trans
 &trans  &trans  &trans  &trans  &trans  &kp LBRC         &kp RBRC    &trans   &trans          &trans    &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &kp LBRC         &kp RBRC    &trans   &trans          &trans    &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &kp LBRC         &kp RBRC &kp MINUS &kp EQUAL   &kp LBKT   &kp RBKT  &kp BSLH
                 &kp LCTL  &kp LALT    &trans           &trans    &trans      &trans
                         >;
                 };
