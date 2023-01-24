@@ -16,7 +16,7 @@
 #define OTH     3
 
 #define TAPPING_TERM 150
-#define QUICK_TAP    150
+#define QUICK_TAP    0
 
 &lt {
 	flavor = "tap-preferred";
@@ -34,7 +34,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <TAPPING_TERM>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -43,7 +43,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_SHIFT";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <TAPPING_TERM>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
