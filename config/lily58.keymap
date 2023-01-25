@@ -9,8 +9,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/outputs.h>
-#define TAPPING_TERM 150
-#define QUICK_TAP    0
+#define TAPPING_TERM 200
+define QUICK_TAP    150
 
 &lt {
 	flavor = "tap-preferred";
@@ -54,11 +54,11 @@
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
     &kp TAB     &kp Q      &kp W      &kp E      &kp R      &kp T                                &kp Y      &kp U      &kp I      &kp O      &kp P     &kp EQUAL
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-    &kp TAB     &kp A       &lt 2 S  &lt 1 D    &hs LSHIFT F  &kp G                      &kp H      &hs LSHIFT J    &lt 1 K     &lt 2 L     &kp SEMI  &kp SINGLE_QUOTE
+    &kp TAB     &kp A       &hm 2 S  &hm 1 D    &hs LSHIFT F  &kp G                      &kp H      &hs LSHIFT J    &hm 1 K     &hm 2 L     &kp SEMI  &kp SINGLE_QUOTE
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤──────────╮   ╭──────────┤──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
     &kp LSHFT   &kp Z      &kp X      &kp C      &kp V      &kp B    &lt 3 LBKT     &kp RBKT     &kp N      &kp M   &kp COMMA    &kp DOT   &kp FSLH   &kp BSLH
 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤──────────╯   ╰──┤──────────────────┼─────────────────┼───────────────┼─────────┼──────────╯
-                      &lt 2 LALT &lt 1 LCTRL &kp LGUI  &kp BACKSPACE                &mt LC(LS(LALT)) SPACE &lt 3 ENTER  &lt 2 MINUS  &lt 1 C_VOL_DN
+                      &lt 2 LALT &hm 1 LCTRL &kp LGUI  &kp BACKSPACE                &mt LC(LS(LALT)) SPACE &hm 3 ENTER  &lt 2 MINUS  &lt 1 C_VOL_DN
    //                ╰──────────┴───────────┴─────────┴─────────────╯                 ╰──────────────────┴─────────────────┴───────────────┴───────────────╯
 			>;
 

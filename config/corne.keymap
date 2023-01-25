@@ -15,8 +15,8 @@
 #define SYM     2
 #define OTH     3
 
-#define TAPPING_TERM 150
-#define QUICK_TAP    0
+#define TAPPING_TERM 200
+#define QUICK_TAP    150
 
 &lt {
 	flavor = "tap-preferred";
@@ -35,7 +35,7 @@
             label = "LAYER_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <TAPPING_TERM>;
-            quick_tap_ms = <0>;
+            quick_tap_ms = <QUICK_TAP>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -44,7 +44,7 @@
             label = "HOMEROW_SHIFT";
             #binding-cells = <2>;
             tapping-term-ms = <TAPPING_TERM>;
-            quick_tap_ms = <0>;
+            quick_tap_ms = <QUICK_TAP>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -61,7 +61,7 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
 &gresc   &kp Q  &kp W  &kp E    &kp R    &kp T                      &kp Y  &kp U    &kp I     &kp O   &kp P    &kp MINUS
-&kp TAB   &kp A  &lt 2 S  &lt 1 D    &hs LSHIFT F  &kp G                &kp H  &hs LSHIFT J    &lt 1 K     &lt 2 L   &kp SEMI &kp SINGLE_QUOTE
+&kp TAB   &kp A  &hm 2 S  &hm 1 D    &hs LSHIFT F  &kp G                &kp H  &hs LSHIFT J    &hm 1 K     &hm 2 L   &kp SEMI &kp SINGLE_QUOTE
 &kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B                     &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp BSLH
                 &lt 1 LCTRL &kp LGUI  &kp BACKSPACE             &mt LC(LS(LALT)) SPACE &lt 3 ENTER &lt 2 MINUS
                         >;
