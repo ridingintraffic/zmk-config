@@ -12,6 +12,10 @@
 #define TAPPING_TERM 200
 #define QUICK_TAP    150
 
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
+};
+
 &lt {
 	flavor = "tap-preferred";
 	tapping-term-ms = <TAPPING_TERM>;
@@ -42,6 +46,20 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+        tdv: tap_dance_v {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_V";
+            #binding-cells = <0>;
+            tapping-term-ms <TAPPING_TERM>;
+            bindings = <&kp V>, <&caps_word>;
+        };
+        tdm: tap_dance_m {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_M";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAPPING_TERM>;
+            bindings = <&kp M>, <&caps_word>;
+        };
     };
 
 	keymap {
@@ -56,7 +74,7 @@
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
     &kp TAB     &kp A     &lt 2 S  &lt 1 D    &hs LSHIFT F  &kp G                                &kp H    &hs LSHIFT J  &lt 1 K  &lt 2 L    &kp SEMI  &kp SINGLE_QUOTE
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤──────────╮   ╭──────────┤──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-    &kp LSHFT   &kp Z      &kp X      &kp C      &kp V      &kp B    &lt 3 LBKT     &kp RBKT     &kp N      &kp M   &kp COMMA    &kp DOT   &kp FSLH   &kp BSLH
+    &kp LSHFT   &kp Z      &kp X      &kp C      &tdv      &kp B    &lt 3 LBKT     &kp RBKT     &kp N      &tdm   &kp COMMA    &kp DOT   &kp FSLH   &kp BSLH
 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤──────────╯   ╰──┤──────────────────┼─────────────────┼───────────────┼─────────┼──────────╯
                       &lt 2 LALT &lt 1 LCTRL &kp LGUI  &kp BACKSPACE                &mt LC(LS(LALT)) SPACE &lt 3 ENTER  &lt 2 MINUS  &lt 1 C_VOL_DN
    //                ╰──────────┴───────────┴─────────┴─────────────╯                 ╰──────────────────┴─────────────────┴───────────────┴───────────────╯
