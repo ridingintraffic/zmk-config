@@ -47,19 +47,19 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        tdv: tap_dance_v {
+        tdg: tap_dance_g {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_V";
+            label = "TAP_DANCE_G";
             #binding-cells = <0>;
             tapping-term-ms = <TAPPING_TERM>;
-            bindings = <&kp V>, <&caps_word>;
+            bindings = <&kp G>, <&caps_word>;
         };
-        tdm: tap_dance_m {
+        tdh: tap_dance_h {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_M";
             #binding-cells = <0>;
             tapping-term-ms = <TAPPING_TERM>;
-            bindings = <&kp M>, <&caps_word>;
+            bindings = <&kp H>, <&caps_word>;
         };
     };
 
@@ -73,9 +73,9 @@
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
     &kp TAB     &kp Q      &kp W      &kp E      &kp R      &kp T                                &kp Y      &kp U      &kp I      &kp O      &kp P     &kp EQUAL
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-    &kp TAB     &kp A     &lt 2 S  &lt 1 D    &hs LSHIFT F  &kp G                                &kp H    &hs LSHIFT J  &lt 1 K  &lt 2 L    &kp SEMI  &kp SINGLE_QUOTE
+    &kp TAB     &kp A     &lt 2 S  &lt 1 D    &hs LSHIFT F  &tdg                                 &tdh    &hs LSHIFT J  &lt 1 K  &lt 2 L    &kp SEMI  &kp SINGLE_QUOTE
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤──────────╮   ╭──────────┤──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-    &kp LSHFT   &kp Z      &kp X      &kp C      &tdv      &kp B    &lt 3 LBKT     &kp RBKT     &kp N      &tdm   &kp COMMA    &kp DOT   &kp FSLH   &kp BSLH
+    &kp LSHFT   &kp Z      &kp X      &kp C      &kp V      &kp B    &lt 3 LBKT     &kp RBKT     &kp N      &kp M   &kp COMMA    &kp DOT   &kp FSLH   &kp BSLH
 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤──────────╯   ╰──┤──────────────────┼─────────────────┼───────────────┼─────────┼──────────╯
                       &lt 2 LALT &lt 1 LCTRL &kp LGUI  &kp BACKSPACE                &mt LC(LS(LALT)) SPACE &lt 3 ENTER  &lt 2 MINUS  &lt 1 C_VOL_DN
    //                ╰──────────┴───────────┴─────────┴─────────────╯                 ╰──────────────────┴─────────────────┴───────────────┴───────────────╯
