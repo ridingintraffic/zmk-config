@@ -48,6 +48,20 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+        tdg: tap_dance_g {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_G";
+            #binding-cells = <0>;
+            tapping-term-ms = <QUICK_TAP>;
+            bindings = <&kp G>, <&caps_word>;
+        };
+        tdh: tap_dance_h {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_M";
+            #binding-cells = <0>;
+            tapping-term-ms = <QUICK_TAP>;
+            bindings = <&kp H>, <&caps_word>;
+        };
     };
 
         keymap {
@@ -61,7 +75,7 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
 &gresc   &kp Q  &kp W  &kp E    &kp R    &kp T                      &kp Y  &kp U    &kp I     &kp O   &kp P    &kp MINUS
-&kp TAB   &kp A  &lt 2 S  &lt 1 D    &hs LSHIFT F  &kp G                &kp H  &hs LSHIFT J    &lt 1 K     &lt 2 L   &kp SEMI &kp SINGLE_QUOTE
+&kp TAB   &kp A  &lt 2 S  &lt 1 D    &hs LSHIFT F  &tdg                &tdh  &hs LSHIFT J    &lt 1 K     &lt 2 L   &kp SEMI &kp SINGLE_QUOTE
 &kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B                     &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp BSLH
                 &lt 1 LCTRL &kp LGUI  &kp BACKSPACE             &mt LC(LS(LALT)) SPACE &lt 3 ENTER &lt 2 MINUS
                         >;
@@ -87,8 +101,8 @@
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-&trans  &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT  &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LPAR  &kp RPAR &trans
-&trans  &trans  &trans  &trans  &trans  &kp LBRC         &kp RBRC    &trans   &trans          &trans    &trans   &trans
+&kp TILDE  &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT  &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LPAR  &kp RPAR &trans
+&kp TILDE &trans  &trans  &trans  &trans  &kp LBRC         &kp RBRC    &trans   &trans          &trans    &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &kp LBRC         &kp RBRC &kp MINUS &kp EQUAL   &kp LBKT   &kp RBKT  &kp BSLH
                 &kp LCTL  &kp LALT    &trans           &trans    &trans      &trans
                         >;

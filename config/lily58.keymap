@@ -108,8 +108,8 @@
 // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
 //                     |      |      |      |        |  |       |      |       |       |
 			bindings = <
-&trans &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT                 &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR &trans
-&kp GRAVE &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT              &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR    &kp EQUAL
+&kp TILDE &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT                 &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR &trans
+&kp TILDE &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT              &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR    &kp EQUAL
 &kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp LBRC                       &kp RBRC      &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &trans
 &kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp LBRC   &trans   &trans    &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp BSLH
                         &trans  &kp LCTL  &kp LALT    &trans   &trans    &trans      &trans    &trans
