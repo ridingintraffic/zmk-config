@@ -12,6 +12,11 @@
 #define TAPPING_TERM 200
 #define QUICK_TAP    150
 
+&caps_word {
+    continue-list = <UNDERSCORE>;
+
+};
+
 &lt {
 	flavor = "tap-preferred";
 	tapping-term-ms = <TAPPING_TERM>;
@@ -42,6 +47,20 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+        tdg: tap_dance_g {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_G";
+            #binding-cells = <0>;
+            tapping-term-ms = <QUICK_TAP>;
+            bindings = <&kp G>, <&caps_word>;
+        };
+        tdh: tap_dance_h {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_H";
+            #binding-cells = <0>;
+            tapping-term-ms = <QUICK_TAP>;
+            bindings = <&kp H>, <&caps_word>;
+        };
     };
 
 	keymap {
@@ -54,11 +73,11 @@
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
     &kp TAB     &kp Q      &kp W      &kp E      &kp R      &kp T                                &kp Y      &kp U      &kp I      &kp O      &kp P     &kp EQUAL
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-    &kp TAB     &kp A     &lt 2 S  &lt 1 D    &hs LSHIFT F  &kp G                                &kp H    &hs LSHIFT J  &lt 1 K  &lt 2 L    &kp SEMI  &kp SINGLE_QUOTE
+    &kp TAB     &lt 3 A   &lt 2 S    &lt 1 D    &hs LSHIFT F  &tdg                               &tdh    &hs LSHIFT J  &lt 1 K   &lt 2 L   &lt 3 SEMI  &kp SINGLE_QUOTE
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤──────────╮   ╭──────────┤──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
     &kp LSHFT   &kp Z      &kp X      &kp C      &kp V      &kp B    &lt 3 LBKT     &kp RBKT     &kp N      &kp M   &kp COMMA    &kp DOT   &kp FSLH   &kp BSLH
 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤──────────╯   ╰──┤──────────────────┼─────────────────┼───────────────┼─────────┼──────────╯
-                      &lt 2 LALT &lt 1 LCTRL &kp LGUI  &kp BACKSPACE                &mt LC(LS(LALT)) SPACE &lt 3 ENTER  &lt 2 MINUS  &lt 1 C_VOL_DN
+                      &lt 2 LALT &kp LSHIFT &kp LGUI  &kp BACKSPACE                &mt LC(LS(LALT)) SPACE &kp ENTER  &kp RSHFT  &lt 1 C_VOL_DN
    //                ╰──────────┴───────────┴─────────┴─────────────╯                 ╰──────────────────┴─────────────────┴───────────────┴───────────────╯
 			>;
 
@@ -89,9 +108,9 @@
 // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
 //                     |      |      |      |        |  |       |      |       |       |
 			bindings = <
-&trans &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT                 &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR &trans
-&kp GRAVE &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT              &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR    &kp EQUAL
-&kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp LBRC                       &kp RBRC      &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &trans
+&kp TILDE &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT                 &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR &trans
+&kp TILDE &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT              &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR    &kp EQUAL
+&kp TILDE &kp F2 &kp F3 &kp F4  &kp F5  &kp LBRC                       &kp RBRC      &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &trans
 &kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp LBRC   &trans   &trans    &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp BSLH
                         &trans  &kp LCTL  &kp LALT    &trans   &trans    &trans      &trans    &trans
 			>;
@@ -108,7 +127,7 @@
 			bindings = <
 &trans  &trans &trans &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &trans    &out OUT_USB    &out OUT_BLE    &trans    &trans   &trans    &trans
 &trans  &gresc  &kp GRAVE &kp TILDE &bt BT_SEL 3 &bt BT_SEL 4                       &kp N6      &kp N7    &kp N8    &kp N9   &kp N0    &trans
-&kp F1    &kp TAB &kp F3 &kp F4  &kp F5  &kp F6                       &trans      &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &trans
+&kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &trans      &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &trans
 &kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &bootloader   &trans   &trans    &bootloader &kp MINUS &kp EQUAL &kp EQUAL &kp RBKT  &kp BSLH
                         &trans  &trans  &trans    &trans   &trans    &trans      &trans    &trans
 			>;
