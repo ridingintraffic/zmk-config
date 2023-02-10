@@ -77,7 +77,7 @@
 &gresc   &kp Q  &kp W  &kp E    &kp R    &kp T                      &kp Y  &kp U    &kp I     &kp O   &kp P    &kp MINUS
 &kp TAB   &lt 3 A  &lt 2 S  &lt 1 D    &hs LSHIFT F  &tdg                &tdh  &hs LSHIFT J    &lt 1 K     &lt 2 L   &lt 3 SEMI &kp SINGLE_QUOTE
 &kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B                     &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp BSLH
-                &lt 1 LCTRL &kp LGUI  &kp BACKSPACE             &mt LC(LS(LALT)) SPACE &lt 3 ENTER &lt 2 MINUS
+                &kp LSHFT &kp LGUI  &kp BACKSPACE             &mt LC(LS(LALT)) SPACE &lt 3 ENTER &kp RSHFT
                         >;
                 };
                 lower_layer {
