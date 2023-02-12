@@ -73,11 +73,11 @@
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
     &kp TAB     &kp Q      &kp W      &kp E      &kp R      &kp T                                &kp Y      &kp U      &kp I      &kp O      &kp P     &kp EQUAL
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-    &kp TAB     &lt 3 A   &lt 2 S    &lt 1 D    &hs LSHIFT F  &tdg                               &tdh    &hs LSHIFT J  &lt 1 K   &lt 2 L   &lt 3 SEMI  &kp SINGLE_QUOTE
+    &kp TAB     &lt 3 A   &lt 2 S    &lt 1 D    &hs LSHIFT F  &tdg                               &tdh    &hs LSHIFT J  &lt 1 K   &lt 2 L   &lt 3 SEMI  &kp SQT
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤──────────╮   ╭──────────┤──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
     &kp LSHFT   &kp Z      &kp X      &kp C      &kp V      &kp B    &kp LBKT       &kp RBKT     &kp N      &kp M   &kp COMMA    &kp DOT   &kp FSLH   &kp BSLH
 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤──────────╯   ╰──┤──────────────────┼─────────────────┼───────────────┼─────────┼──────────╯
-                      &lt 2 LALT &kp LSHIFT &kp LGUI  &kp BACKSPACE                   &mt LC(LS(LALT)) SPACE &kp ENTER  &kp RSHFT  &lt 1 C_VOL_DN
+                        &lt 2 LALT   &kp LSHIFT &kp LGUI  &kp BACKSPACE                   &mt LC(LS(LALT)) SPACE &kp ENTER  &kp RSHFT  &lt 1 C_VOL_DN
 //                      ╰──────────┴───────────┴─────────┴──────────╯                 ╰──────────────────┴─────────────────┴───────────────┴───────────────╯
 			>;
 
@@ -89,9 +89,9 @@
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                             ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
     &trans     &gresc      &trans     &trans     &trans     &trans                                  &trans     &trans     &trans      &trans    &trans    &trans
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                             ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-    &trans     &GRAVE      &trans     &trans    &trans      &trans                                   &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT &kp SINGLE_QUOTE &kp TILDE
+    &trans     &GRAVE      &trans     &trans    &trans      &trans                                   &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT &kp SQT     &kp TILDE
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤──────────╮       ╭──────────┤──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-  &trans   &TILDE    &trans &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &trans  &trans      &trans    &kp MINUS &kp KP_PLUS  &kp LBRC  &kp RBRC &kp BSLH  &kp PIPE
+  &trans   &kp TILDE    &trans &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &trans  &trans      &trans    &kp MINUS &kp KP_PLUS  &kp LBRC  &kp RBRC &kp BSLH  &kp PIPE
 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤──────────╯       ╰──┤──────────────────┼─────────────────┼───────────────┼─────────┼──────────╯
                        &kp LALT  &kp LCTL  &kp LALT  &kp DELETE                            &kp TAB   &kp MINUS   &kp UNDER  &kp LC(UP)
 //                ╰──────────┴───────────┴─────────┴─────────────╯                        ╰──────────────────┴─────────────────┴───────────────┴───────────────╯
@@ -101,11 +101,17 @@
 		};
 		raise_layer {
 		bindings = <
+//╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                             ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
 &kp TILDE &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT                                    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR &trans
+//├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                             ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
 &kp TILDE &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                               &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp EQUAL
+//├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                             ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
 &kp TILDE &kp F2 &kp F3 &kp F4  &kp F5  &kp LBRC                                           &kp RBRC   &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &trans
+//├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤──────────╮       ╭──────────┤──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
 &kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp LBRC   &trans                        &trans    &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp BSLH
+ //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤──────────╯       ╰──┤──────────────────┼─────────────────┼───────────────┼─────────┼──────────╯
                         &trans  &kp LCTL  &kp LALT    &trans                               &trans    &kp LC(LEFT)    &kp LC(RIGHT) &kp LC(UP)
+//                ╰──────────┴───────────┴─────────┴─────────────╯                        ╰──────────────────┴─────────────────┴───────────────┴───────────────╯
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
