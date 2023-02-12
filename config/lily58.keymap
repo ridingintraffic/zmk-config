@@ -75,7 +75,7 @@
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
     &kp TAB     &lt 3 A   &lt 2 S    &lt 1 D    &hs LSHIFT F  &tdg                               &tdh    &hs LSHIFT J  &lt 1 K   &lt 2 L   &lt 3 SEMI  &kp SINGLE_QUOTE
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤──────────╮   ╭──────────┤──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-    &kp LSHFT   &kp Z      &kp X      &kp C      &kp V      &kp B    &lt 3 LBKT     &kp RBKT     &kp N      &kp M   &kp COMMA    &kp DOT   &kp FSLH   &kp BSLH
+    &kp LSHFT   &kp Z      &kp X      &kp C      &kp V      &kp B    &kp LBKT       &kp RBKT     &kp N      &kp M   &kp COMMA    &kp DOT   &kp FSLH   &kp BSLH
 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤──────────╯   ╰──┤──────────────────┼─────────────────┼───────────────┼─────────┼──────────╯
                       &lt 2 LALT &kp LSHIFT &kp LGUI  &kp BACKSPACE                   &mt LC(LS(LALT)) SPACE &kp ENTER  &kp RSHFT  &lt 1 C_VOL_DN
 //                      ╰──────────┴───────────┴─────────┴──────────╯                 ╰──────────────────┴─────────────────┴───────────────┴───────────────╯
@@ -85,13 +85,13 @@
 		lower_layer {
 		bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                             ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-    &trans   &kp N1 &kp N2 &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4)))   &kp N5                          &kp N6      &kp N7    &kp N8    &kp N9     &kp N0   &kp MINUS
+  &trans      &trans      &trans     &trans      &trans   &trans                                    &trans      &trans    &trans     &trans     &trans   &trans
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                             ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
     &trans     &gresc      &trans     &trans     &trans     &trans                                  &trans     &trans     &trans      &trans    &trans    &trans
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                             ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-    &trans     &GRAVE     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT &kp SINGLE_QUOTE &kp TILDE
+    &trans     &GRAVE      &trans     &trans    &trans      &trans                                   &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT &kp SINGLE_QUOTE &kp TILDE
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤──────────╮       ╭──────────┤──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-    &trans     &TILDE     &trans &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &trans &trans     &trans    &kp MINUS &kp KP_PLUS  &kp LBRC  &kp RBRC &kp BSLH  &kp PIPE
+  &trans   &TILDE    &trans &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &trans  &trans      &trans    &kp MINUS &kp KP_PLUS  &kp LBRC  &kp RBRC &kp BSLH  &kp PIPE
 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤──────────╯       ╰──┤──────────────────┼─────────────────┼───────────────┼─────────┼──────────╯
                        &kp LALT  &kp LCTL  &kp LALT  &kp DELETE                            &kp TAB   &kp MINUS   &kp UNDER  &kp LC(UP)
 //                ╰──────────┴───────────┴─────────┴─────────────╯                        ╰──────────────────┴─────────────────┴───────────────┴───────────────╯
@@ -116,7 +116,7 @@
 &trans &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT                             &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR     &trans
 &kp GRAVE &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3         &kp LEFT     &kp DOWN  &kp UP    &kp RIGHT  &trans   &kp TILDE
 &kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &bootloader   &trans              &trans &bootloader &kp MINUS &kp EQUAL &kp EQUAL &kp RBKT  &kp BSLH
-                        &trans  &trans  &trans    &trans   &trans    &trans      &trans    &trans
+                        &trans  &trans  &trans    &trans                          &trans    &trans      &trans    &trans
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
