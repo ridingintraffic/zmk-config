@@ -89,7 +89,7 @@
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                             ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
     &trans     &gresc      &trans     &trans     &trans     &trans                                  &trans     &trans     &trans      &trans    &trans    &trans
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                             ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-    &trans     &GRAVE      &trans     &trans    &trans      &trans                                   &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT &kp SQT     &kp TILDE
+    &trans     &kp GRAVE      &trans     &trans    &trans      &trans                                   &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT &kp SQT     &kp TILDE
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤──────────╮       ╭──────────┤──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
   &trans   &kp TILDE    &trans &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &trans  &trans      &trans    &kp MINUS &kp KP_PLUS  &kp LBRC  &kp RBRC &kp BSLH  &kp PIPE
 //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤──────────╯       ╰──┤──────────────────┼─────────────────┼───────────────┼─────────┼──────────╯
@@ -102,13 +102,13 @@
 		raise_layer {
 		bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                             ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-&kp TILDE &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT                                    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR &trans
+   &kp TILDE &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT                                    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR &trans
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                             ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-&kp TILDE &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                               &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp EQUAL
+   &kp TILDE &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                               &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp EQUAL
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                             ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-&kp TILDE &kp F2 &kp F3 &kp F4  &kp F5  &kp LBRC                                           &kp RBRC   &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &trans
+   &kp TILDE &kp F2 &kp F3 &kp F4  &kp F5  &kp LBRC                                           &kp RBRC   &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &trans
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤──────────╮       ╭──────────┤──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-&kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp LBRC   &trans                        &trans    &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp BSLH
+      &kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp LBRC   &trans                        &trans    &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp BSLH
  //╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤──────────╯       ╰──┤──────────────────┼─────────────────┼───────────────┼─────────┼──────────╯
                         &trans  &kp LCTL  &kp LALT    &trans                               &trans    &kp LC(LEFT)    &kp LC(RIGHT) &kp LC(UP)
 //                ╰──────────┴───────────┴─────────┴─────────────╯                        ╰──────────────────┴─────────────────┴───────────────┴───────────────╯
