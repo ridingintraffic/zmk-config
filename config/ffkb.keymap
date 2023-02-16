@@ -8,6 +8,8 @@
 #define DEFAULT 0
 #define LOWER     1
 #define RAISE     2
+#define UTIL      3
+
 
 #define TAPPING_TERM 200
 #define QUICK_TAP    150
@@ -105,7 +107,7 @@
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤      ╰──────────╯       ├──────────┼──────────┼──────────┼──────────┼──────────┼──-────────┤
     &kp LSHIFT &mt LSHIFT Z  &kp X     &kp C      &kp V      &kp B                              &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp BSLH
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┼───-───────┤
-                       &none      &kp LSHFT    &kp LGUI  &kp BACKSPACE                  &mt LC(LS(LALT)) SPACE &lt 3 ENTER   &kp RSHFT            &none
+                       &none      &kp LSHFT    &kp LGUI  &kp BACKSPACE                  &mt LC(LS(LALT)) SPACE &lt 3 ENTER   &kp RSHIFT            &none
 //                                ╰─────────┴─────────┴─────────────╯                       ╰────────────┴───────────────┴───────────────╯
  
             >;
@@ -117,9 +119,9 @@
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp LG(EQUAL) LG(MINUS) &inc_dec_kp LG(EQUAL) LG(MINUS)>;
 
             bindings = <
-    &kp GRAVE   &kp N1       &kp N2       &kp N3      &kp N4        &kp N5                                      &kp N6          &kp N7           &kp N8        &kp N9      &kp N0      &kp MINUS
-    &kp GRAVE     &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3               &trans           &kp LEFT        &kp DOWN         &kp UP        &kp RIGHT   &kp PLUS    &trans
-    &kp LSHIFT &out OUT_USB  &out OUT_BLE       &trans      &trans        &trans                                &rgb_ug RGB_TOG &rgb_ug RGB_EFR  &rgb_ug RGB_EFF &rgb_ug RGB_BRI &rgb_ug RGB_BRD     &trans
+    &kp GRAVE   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                                      &kp N6          &kp N7           &kp N8        &kp N9      &kp N0      &kp MINUS
+    &kp GRAVE   &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3          &trans           &kp LEFT        &kp DOWN         &kp UP        &kp RIGHT   &kp PLUS    &trans
+    &kp LSHIFT &out OUT_USB  &out OUT_BLE &trans       &trans       &trans                                &rgb_ug RGB_TOG &rgb_ug RGB_EFR  &rgb_ug RGB_EFF &rgb_ug RGB_BRI &rgb_ug RGB_BRD     &trans
                                         &trans      &kp LCTL  &kp LALT  &kp DELETE      &kp TAB    &kp MINUS   &kp UNDER      &trans
             >;
         };
