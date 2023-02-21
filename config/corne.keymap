@@ -102,7 +102,7 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
 &kp TILDE  &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT  &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LPAR  &kp RPAR &trans
-&kp TILDE &trans  &trans  &trans  &trans  &kp LBRC         &kp RBRC    &trans   &trans          &trans    &kp DOUBLE_QUOTE   &trans
+&kp TILDE &trans  &trans  &trans  &trans  &kp LBRC         &kp RBRC    &trans   &trans          &trans    &kp DOUBLE_QUOTES   &trans
 &trans  &trans  &trans  &trans  &trans  &kp LBRC         &kp RBRC &kp MINUS &kp EQUAL   &kp LBKT   &kp PIPE  &kp BSLH
                 &kp LCTL  &kp LALT    &kp BACKSPACE           &trans    &trans      &trans
                         >;
