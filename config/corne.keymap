@@ -75,7 +75,7 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
 &gresc   &kp Q  &kp W  &kp E    &kp R    &kp T                      &kp Y  &kp U    &kp I     &kp O   &kp P    &kp MINUS
-&kp TAB   &lt 3 A  &lt 2 S  &lt 1 D    &hs LSHIFT F  &tdg                &tdh  &hs LSHIFT J    &lt 1 K     &lt 2 L   &lt 3 SEMI &kp SINGLE_QUOTE
+&kp TAB   &lt 3 A  &lt 2 S  &lt 1 D    &hs LSHIFT F  &kp G                &kp H  &hs LSHIFT J    &lt 1 K     &lt 2 L   &lt 3 SEMI &kp SINGLE_QUOTE
 &kp LSHFT &mt LSHIFT Z &kp X  &kp C    &kp V    &kp B                     &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp BSLH
                 &kp LSHFT &kp LGUI  &kp BACKSPACE             &mt LC(LS(LALT)) SPACE &lt 3 ENTER &kp RSHFT
                         >;
@@ -87,9 +87,9 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4   &kp N5                                            &kp N6     &kp N7    &kp N8    &kp N9           &kp N0   &kp EQUAL
-&kp GRAVE &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                  &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT        &kp SINGLE_QUOTE   &kp TILDE
-&trans &ext_power EP_ON &ext_power EP_OFF &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &kp LBKT  &kp RBKT   &kp MINUS &kp EQUAL &kp SINGLE_QUOTE &kp BSLH &kp PIPE
+&kp GRAVE &gresc &kp N2 &kp N3 &kp N4   &kp N5                                            &kp N6     &kp N7    &kp N8    &kp N9           &kp N0   &kp EQUAL
+&kp GRAVE &kp GRAVE &none &none &none &none                                      &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT        &kp SINGLE_QUOTE   &kp TILDE
+&trans &kp TILDE &none &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &kp LBKT            &kp RBKT   &kp MINUS &kp EQUAL &kp SINGLE_QUOTE &kp BSLH &kp PIPE
                                         &kp LCTL  &kp LALT &kp BACKSPACE                     &kp TAB   &kp MINUS    &kp UNDER
                         >;
                 };
@@ -101,7 +101,7 @@
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-&kp TILDE  &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT  &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LPAR  &kp RPAR &trans
+&kp TILDE  &kp N1     &kp N2     &kp N3     &kp N4     &kp N5  &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LPAR  &kp RPAR &trans
 &kp TILDE &trans  &trans  &trans  &trans  &kp LBRC         &kp RBRC    &trans   &trans          &trans    &kp DOUBLE_QUOTES   &trans
 &trans  &trans  &trans  &trans  &trans  &kp LBRC         &kp RBRC &kp MINUS &kp EQUAL   &kp LBKT   &kp PIPE  &kp BSLH
                 &kp LCTL  &kp LALT    &kp BACKSPACE           &trans    &trans      &trans
@@ -111,7 +111,7 @@
         oth_layer {
             bindings = <
     &trans  &gresc  &kp GRAVE &kp TILDE &kp DOLLAR &kp PRCNT  &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LPAR  &kp RPAR &trans
-    &trans  &kp TAB  &trans  &trans  &trans  &trans         &trans    &trans   &trans          &trans    &trans   &trans
+    &trans  &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3         &trans    &trans   &trans          &trans    &trans   &trans
     &trans  &trans  &trans  &trans  &trans  &bootloader     &bootloader    &trans   &trans          &trans    &trans   &trans
             &trans    &kp LGUI  &trans        &trans &trans &trans
                 >;
