@@ -111,7 +111,6 @@
                 &kp LCTL  &kp LALT    &kp BACKSPACE           &trans    &trans      &trans
                         >;
                 };
-        };
         oth_layer {
             label = "Other";
             bindings = <
