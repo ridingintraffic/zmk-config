@@ -19,10 +19,6 @@
 #define SYM     2
 #define OTH     3
 
-&lt {
-	flavor = "tap-preferred";
-	tapping-term-ms = <TAPPING_TERM>;
-};
 
 &mt {
 	flavor = "tap-preferred";
