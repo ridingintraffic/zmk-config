@@ -14,6 +14,11 @@
 #define TAPPING_TERM 200
 #define QUICK_TAP    150
 
+#define DEFAULT 0
+#define NAV     1
+#define SYM     2
+#define OTH     3
+
 &lt {
 	flavor = "tap-preferred";
 	tapping-term-ms = <TAPPING_TERM>;
@@ -64,6 +69,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
+                    label = "Default";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -80,7 +86,8 @@
                &kp LSHFT &kp LGUI  &mt LC(LS(LALT)) BACKSPACE             &mt LC(LS(LALT)) SPACE &lt 3 ENTER &kp RSHFT
                         >;
                 };
-                lower_layer {
+                nav_layer {
+                    label = "Navigation";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -94,7 +101,8 @@
                         >;
                 };
 
-                raise_layer {
+                sym_layer {
+                    label = "Symbols";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
 // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -108,7 +116,8 @@
                         >;
                 };
         };
-        util_layer {
+        oth_layer {
+            label = "Other";
             bindings = <
     &trans  &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT                            &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR &none
     &trans  &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3         &trans    &trans   &trans          &trans    &trans   &trans
