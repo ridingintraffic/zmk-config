@@ -12,7 +12,7 @@
 
 
 #define TAPPING_TERM 200
-#define QUICK_TAP    150
+#define QUICK_TAP    100
 
 #define DEFAULT 0
 #define NAV     1
@@ -21,6 +21,11 @@
 
 
 &mt {
+	flavor = "tap-preferred";
+	tapping-term-ms = <TAPPING_TERM>;
+};
+
+&lt {
 	flavor = "tap-preferred";
 	tapping-term-ms = <TAPPING_TERM>;
 };
@@ -66,44 +71,36 @@
 
                 default_layer {
                     label = "Default";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
     &gresc      &kp Q      &kp W       &kp E      &kp R      &kp T                    &kp Y       &kp U       &kp I     &kp O       &kp P    &kp MINUS
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-    &kp TAB   &lt OTH A  &lt SYM S   &lt NAV D &hs LSHIFT F   &kp G                      &kp H  &hs LSHIFT J   &lt NAV K &lt SYM L &lt OTH SEMI &kp SINGLE_QUOTE
+    &kp TAB   &lt OTH A  &lt SYM S   &lt NAV D &hs LSHIFT F   &kp G                      &kp H  &hs LSHIFT J   &lt NAV K &lt SYM L &lt OTH SEMI &kp SQT
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
    &kp LSHFT &mt LSHIFT Z &kp X        &kp C      &kp V      &kp B                     &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp BSLH
- //╰──────────┴──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼─────────────────┼───────────────┼─────────┼──────────╯
-               &kp LSHFT &kp LGUI  &mt LC(LS(LALT)) BACKSPACE             &mt LC(LS(LALT)) SPACE &lt OTH ENTER &kp RSHFT
+//╰──────────┴──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼─────────────────┼───────────────┼─────────┼──────────╯
+                                &kp LSHFT      &kp LGUI  &mt LC(LS(LALT)) BSPC     &mt LC(LS(LALT)) SPACE &lt OTH ENTER     &kp RSHFT
+//                            ╰──────────────┴──────────────┴─────────────────╯    ╰─────────────────────┴───────────────┴───────────────╯
                         >;
                 };
                 nav_layer {
                     label = "Navigation";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-&kp GRAVE &gresc &none &none &none &none                                            &none &none    &none &none           &none &none
-&kp GRAVE &kp GRAVE &none &none &none &none                                      &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT        &kp SINGLE_QUOTE   &kp TILDE
-&trans &kp TILDE &none &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &kp LBKT            &kp RBKT   &kp MINUS &kp EQUAL &kp SINGLE_QUOTE &kp BSLH &kp PIPE
-                                        &kp LCTL  &kp LALT &kp BACKSPACE                     &kp TAB   &kp MINUS    &kp UNDER
+//╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
+   &kp GRAVE    &gresc     &none      &none      &none      &none                      &none      &none      &none      &none      &none      &none
+//├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+   &kp GRAVE  &kp GRAVE   &none       &none      &none       &none                    &kp LEFT   &kp DOWN    &kp UP    &kp RIGHT  &kp SQT   &kp TILDE
+//├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+     &none    &kp TILDE &none &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &kp LBKT          &kp RBKT  &kp MINUS  &kp EQUAL   &kp SQT   &kp BSLH   &kp PIPE
+ //╰──────────┴──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼─────────────────┼───────────────┼─────────┼──────────╯
+                                      &kp LCTL  &kp LALT   &kp BSLH                   &kp TAB    &kp MINUS         &kp UNDER
+   //                               ╰─────────┴─────────┴───────────╯               ╰─────────┴───────────────┴───────────────╯
+
                         >;
                 };
 
                 sym_layer {
                     label = "Symbols";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
 &kp TILDE  &kp N1     &kp N2     &kp N3     &kp N4     &kp N5  &kp N6 &kp N7     &kp N8     &kp N9     &kp N0 &trans
 &kp TILDE &trans  &trans  &trans  &trans  &kp LBRC         &kp RBRC    &trans   &trans          &trans    &kp DOUBLE_QUOTES   &trans
