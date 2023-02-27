@@ -64,6 +64,15 @@
             tapping-term-ms = <QUICK_TAP>;
             bindings = <&kp H>, <&caps_word>;
         };
+        td: tapdance {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAPDANCE";
+            #binding-cells = <2>;
+            tapping-term-ms = <QUICK_TAP>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
     };
 
         keymap {
@@ -73,13 +82,13 @@
                     label = "Default";
                         bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-    &gresc      &kp Q      &kp W       &kp E      &kp R      &kp T                    &kp Y       &kp U       &kp I     &kp O       &kp P    &kp MINUS
+    &gresc      &mt Q      &kp W       &kp E      &kp R      &kp T                    &kp Y       &kp U       &kp I     &kp O       &kp P    &kp MINUS
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
     &kp TAB   &lt OTH A  &lt SYM S   &lt NAV D &hs LSHIFT F   &kp G                      &kp H  &hs LSHIFT J   &lt NAV K &lt SYM L &lt OTH SEMI &kp SQT
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
    &kp LSHFT &mt LSHIFT Z &kp X        &kp C      &kp V      &kp B                     &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp BSLH
 //╰──────────┴──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼─────────────────┼───────────────┼─────────┼──────────╯
-                                &kp LSHFT      &kp LGUI  &mt LC(LS(LALT)) BSPC     &mt LC(LS(LALT)) SPACE &lt OTH ENTER     &kp RSHFT
+                        &mt LSHFT UNDER  &mt LGUI  &mt LC(LS(LALT)) BSPC     &mt LC(LS(LALT)) SPACE &lt OTH ENTER  &mt RSHFT MINUS
 //                            ╰──────────────┴──────────────┴─────────────────╯    ╰─────────────────────┴───────────────┴───────────────╯
                         >;
                 };
@@ -93,7 +102,7 @@
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
      &none    &kp TILDE &none &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &kp LBKT          &kp RBKT  &kp MINUS  &kp EQUAL   &kp SQT   &kp BSLH   &kp PIPE
  //╰──────────┴──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼─────────────────┼───────────────┼─────────┼──────────╯
-                                      &kp LCTL  &kp LALT   &kp BSLH                   &kp TAB    &kp MINUS         &kp UNDER
+                                      &kp LCTL  &kp LALT   &kp BSLH                   &kp TAB    &td MINUS EQUAL &td UNDER PLUS
    //                               ╰─────────┴─────────┴───────────╯               ╰─────────┴───────────────┴───────────────╯
 
                         >;
