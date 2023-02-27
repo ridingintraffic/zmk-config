@@ -88,7 +88,7 @@
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
    &kp LSHFT &mt LSHIFT Z &kp X        &kp C      &kp V      &kp B                     &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp BSLH
 //╰──────────┴──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼─────────────────┼───────────────┼─────────┼──────────╯
-                        &mt LSHFT UNDER  &mt LGUI  &mt LC(LS(LALT)) BSPC     &mt LC(LS(LALT)) SPACE &lt OTH ENTER  &mt RSHFT MINUS
+                        &mt LSHFT UNDER  &kp LGUI  &mt LC(LS(LALT)) BSPC     &mt LC(LS(LALT)) SPACE &lt OTH ENTER  &mt RSHFT MINUS
 //                            ╰──────────────┴──────────────┴─────────────────╯    ╰─────────────────────┴───────────────┴───────────────╯
                         >;
                 };
