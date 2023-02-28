@@ -6,8 +6,10 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
-#define LOWER     1
-#define RAISE     2
+#define NAV     1
+#define SYM     2
+#define OTH     3
+
 
 #define TAPPING_TERM 200
 #define QUICK_TAP    150
