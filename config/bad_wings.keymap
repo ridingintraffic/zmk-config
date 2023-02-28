@@ -110,10 +110,15 @@
             label = "Default";
 
             bindings = <
-    &kp Q        &kp W        &kp E       &kp R         &kp T    &kp Y       &kp U         &kp I       &kp O         &kp P
-    &lt 3 A      &lt 2 S        &lt 1 D       &hs LSHIFT F  &tdg    &tdh       &hs LSHIFT J  &lt 1 K       &lt 2 L         &lt 3 SEMI
-    &kp Z        &kp X        &kp C       &kp V         &kp B    &kp N       &kp M         &kp COMMA   &kp DOT       &kp FSLH
-                        &kp LSHIFT   &kp LGUI  &kp BACKSPACE    &mt LC(LS(LALT)) SPACE &lt 3 ENTER  &kp RSHIFT
+//╭──────────┬──────────┬──────────┬──────────┬──────────╮               ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+    &kp Q       &kp W       &kp E     &kp R      &kp T                      &kp Y      &kp U       &kp I       &kp O    &kp P
+//├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
+    &lt 3 A     &lt 2 S   &lt 1 D  &hs LSHIFT F  &tdg                       &tdh    &hs RSHFT J   &lt 1 K   &lt 2 L   &lt 3 SEMI
+//├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
+     &kp Z       &kp X     &kp C      &kp V      &kp B                      &kp N      &kp M    &kp COMMA    &kp DOT   &kp FSLH
+//╰──────────┴──────────┴──────────┼──────────┼──────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
+                         &kp LSHFT   &kp LGUI &mt LC(LS(LALT)) BSPC   &mt LC(LS(LALT)) SPACE &lt 3 ENTER     &kp RSHIFT
+//                     ╰───────────┴───────────┴─────────────╯       ╰───────────────────┴───────────────┴───────────────╯
             >;
         };
 
@@ -121,10 +126,15 @@
             label = "Navigation";
 
             bindings = <
- &gresc         &kp N2       &kp N3       &kp N4       &kp N5                      &kp N6    &kp N7        &kp N8        &kp N9           &kp N0
- &kp GRAVE     &none  &none  &none  &none                 &kp LEFT  &kp DOWN      &kp UP        &kp RIGHT        &kp PLUS
+//╭──────────┬──────────┬──────────┬──────────┬──────────╮               ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+ &gresc         &none      &none        &none      &none                     &none      &none       &none      &none         &none  
+//├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
+ &kp GRAVE     &none  &none  &none  &none                 &kp LEFT  &kp DOWN      &kp UP        &kp RIGHT        &kp SQT
+//├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
  &kp TILDE  &none &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &kp LBKT         &kp RBKT &kp MINUS &kp KP_PLUS     &kp LBRC  &kp RBRC
-            &kp LCTL  &kp LALT  &kp DELETE                                        &kp TAB    &kp MINUS   &kp UNDER 
+//╰──────────┴──────────┴──────────┼──────────┼──────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
+              &kp LCTL  &kp LALT  &kp DELETE                                        &kp TAB    &kp MINUS   &kp UNDER 
+//                     ╰───────────┴───────────┴─────────────╯       ╰───────────────────┴───────────────┴───────────────╯
                >;
         };
 
@@ -132,20 +142,30 @@
             label = "Symbols";
 
             bindings = <
+//╭──────────┬──────────┬──────────┬──────────┬──────────╮               ╭──────────┬──────────┬──────────┬──────────┬──────────╮
      &kp N1     &kp N2     &kp N3     &kp N4     &kp N5       &kp N6     &kp N7     &kp N8     &kp N9     &kp N0 
+//├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
+    &trans   &trans &trans   &trans     &trans         &trans    &trans    &trans          &trans    &kp DOUBLE_QUOTES
+//├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
     &trans   &trans &trans   &trans     &trans         &trans    &trans    &trans          &trans    &trans
-    &trans   &trans &trans   &trans     &trans         &trans    &trans    &trans          &trans    &trans
+//╰──────────┴──────────┴──────────┼──────────┼──────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
             &trans        &trans       &trans          &trans &trans &trans
+//                     ╰───────────┴───────────┴─────────────╯       ╰───────────────────┴───────────────┴───────────────╯
                 >;
         };
         oth_layer {
             label = "Other";
 
             bindings = <
+//╭──────────┬──────────┬──────────┬──────────┬──────────╮               ╭──────────┬──────────┬──────────┬──────────┬──────────╮
      &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR
+//├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
     &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3   &trans &trans &trans &trans &trans
+//├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
     &out OUT_USB  &out OUT_BLE    &trans  &trans &bootloader  &bootloader &trans  &trans &trans &trans
+//╰──────────┴──────────┴──────────┼──────────┼──────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
             &trans    &kp LGUI  &trans        &trans &trans &trans
+//                     ╰───────────┴───────────┴─────────────╯       ╰───────────────────┴───────────────┴───────────────╯
                 >;
         };
     };
