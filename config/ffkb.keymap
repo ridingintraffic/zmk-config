@@ -113,10 +113,10 @@
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp LG(EQUAL) LG(MINUS) &inc_dec_kp LG(EQUAL) LG(MINUS)>;
 
             bindings = <
-    &kp GRAVE   &gresc        &none       &none      &none        &none                                      &none        &none       &none      &none        &none      &none
-    &kp GRAVE    &kp GRAVE    &none       &none      &none       &none                &trans              &kp LEFT        &kp DOWN         &kp UP        &kp RIGHT   &kp PLUS    &trans
-    &kp LSHIFT &kp TILDE  &out OUT_BLE       &trans      &trans        &trans                            &kp RBKT  &kp MINUS  &kp EQUAL   &kp SQT   &kp BSLH     &trans
-                                        &trans      &kp LCTL  &kp LALT   &kp BSLH                          &kp TAB    &kp EQUAL &kp PLUS      &trans
+    &kp GRAVE   &gresc        &none       &none      &none        &none                                   &none     &none       &none       &none      &none      &none
+    &kp GRAVE    &kp GRAVE    &none       &none      &none       &none                &trans              &kp LEFT  &kp DOWN    &kp UP      &kp RIGHT  &kp SQT    &trans
+    &kp LSHIFT &kp TILDE  &out OUT_BLE       &trans      &trans        &trans                             &kp RBKT  &kp MINUS   &kp EQUAL   &kp SQT    &kp BSLH   &trans
+                                        &trans      &kp LCTL  &kp LALT   &kp BSLH                          &kp TAB  &kp EQUAL   &kp PLUS      &trans
             >;
         };
         lower_layer {
@@ -138,7 +138,7 @@
 
             bindings = <
     &kp GRAVE   &gresc &kp GRAVE &kp TILDE &kp DOLLAR &kp PRCNT                                      &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR    &kp EQUAL
-    &trans     &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3               &trans           &kp LEFT        &kp DOWN         &kp UP        &kp RIGHT   &kp PLUS    &trans
+    &trans     &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3               &trans           &kp LEFT        &kp DOWN         &kp UP        &kp RIGHT   &kp SQT    &trans
     &kp LSHIFT &trans   &trans       &trans      &trans       &bootloader                                &bootloader &rgb_ug RGB_EFR  &rgb_ug RGB_EFF &rgb_ug RGB_BRI &rgb_ug RGB_BRD     &trans
                                         &trans      &trans        &kp LALT      &kp TAB        &kp LC(LEFT)   &kp LC(UP)    &kp LC(RIGHT)      &trans
             >;
