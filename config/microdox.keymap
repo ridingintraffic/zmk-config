@@ -112,7 +112,7 @@
 //├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
     &kp Z       &kp X       &kp C     &kp V      &kp B                     &kp N      &kp M     &kp COMMA   &kp DOT    &kp FSLH
 //╰──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
-        &mt LSHFT UNDER      &kp LGUI        &mt LC(LS(LALT)) BSPC   &mt LC(LS(LALT)) SPACE &mt LG(LC(LS(LALT))) ENTER  &mt RSHFT MINUS
+   &mt LSHFT UNDER      &kp LGUI        &mt LC(LS(LALT)) BSPC        &mt LC(LS(LALT)) SPACE &mt LG(LC(LS(LALT))) ENTER  &mt RSHFT MINUS
  //            ╰──────────────┴──────────────┴─────────────────╯    ╰─────────────────────┴───────────────┴───────────────╯
 
             >;
@@ -126,8 +126,8 @@
     &gresc      &none      &none      &kp LBKT   &kp LBRC                     &kp RBRC   &kp RBKT       &none      &none      &none
 //├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
     &kp GRAVE   &none      &none      &none       &none                    &kp LEFT   &kp DOWN    &kp UP   &kp RIGHT   &kp DQT
-//├──────────┼─────────┼───────-───┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
-&kp TILDE &none &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &kp LBKT            &kp RBKT  &kp MINUS  &kp EQUAL   &kp SQT   &kp BSLH  
+//├──────────┼─────────┼───────-───┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤ 
+   &kp TILDE      &none &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &kp LBKT            &kp RBKT  &kp MINUS  &kp EQUAL   &kp SQT   &kp BSLH  
  //╰──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
                   &kp LCTL        &kp LALT       &kp DELETE                  &kp TAB         &kp EQUAL        &kp PLUS
  //            ╰──────────────┴──────────────┴─────────────────╯    ╰─────────────────────┴───────────────┴───────────────╯
@@ -156,11 +156,11 @@
 //╭──────────┬──────────┬──────────┬──────────┬──────────╮                         ╭──────────┬──────────┬──────────┬──────────┬──────────╮
    &kp EXCL     &kp AT    &kp HASH  &kp DOLLAR &kp PRCNT                            &kp CARET   &kp AMPS &kp KP_MULTIPLY &kp LPAR &kp RPAR
 //├──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┤
-  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                     &kp HOME    &kp END   &kp PG_UP &kp PG_DN    &rgb_ug RGB_BRI
+  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                     &kp HOME    &kp END  &kp PG_UP &kp PG_DN &rgb_ug RGB_BRI
 //├──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┤
-    &rgb_ug RGB_TOG &rgb_ug RGB_EFR  &rgb_ug RGB_EF &rgb_ug RGB_BRI  &bootloader  &bootloader &rgb_ug RGB_HUI &rgb_ug RGB_SAI  &rgb_ug RGB_SPI &rgb_ug RGB_BRD
+ &rgb_ug RGB_TOG &rgb_ug RGB_EFR &rgb_ug RGB_EF &rgb_ug RGB_BRI &bootloader  &bootloader &rgb_ug RGB_HUI &rgb_ug RGB_SAI  &none &rgb_ug RGB_BRD
  //╰──────────┴──────────┼──────────┼──────────┼─────────╯                         ╰─────────┼───────────┼──────────┼──────────┼──────────╯
-                    &none       &rgb_ug RGB_EFF &rgb_ug RGB_BRD                  &rgb_ug RGB_HUD    &rgb_ug RGB_SAD   &rgb_ug RGB_SPD
+                    &none       &rgb_ug RGB_EFF &rgb_ug RGB_BRD                  &rgb_ug RGB_HUD    &rgb_ug RGB_SAD   &none
  //            ╰──────────────┴──────────────┴─────────────────╯              ╰─────────────────────┴───────────────┴───────────────╯
                 >;
         };
