@@ -10,7 +10,7 @@
 	compatible = "nordic,nrf-spim";
 	/* Cannot be used together with i2c0. */
 	status = "okay";
-	mosi-pin = <38>; 
+	mosi-pin = <6>; 
 	//mosi-pin = <38>; // this is wrong at 38 it needs to be D3
 	//https://github.com/qmk/qmk_firmware/blob/master/keyboards/bastardkb/skeletyl/v2/elitec/config.h#L30
 	// Unused pins, needed for SPI definition, but not used by the ws2812 driver itself.
