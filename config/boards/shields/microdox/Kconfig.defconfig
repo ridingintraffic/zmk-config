@@ -37,13 +37,13 @@ config LV_HOR_RES_MAX
 config LV_VER_RES_MAX
 	default 32
 
-config LV_VDB_SIZE
+config LV_Z_VDB_SIZE
 	default 64
 
-config LV_DPI
+config LV_DPI_DEF
 	default 148
 
-config LV_BITS_PER_PIXEL
+config LV_Z_BITS_PER_PIXEL
 	default 1
 
 choice LV_COLOR_DEPTH
