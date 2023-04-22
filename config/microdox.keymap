@@ -112,7 +112,7 @@
 //├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
     &kp Z       &kp X       &kp C     &kp V      &kp B                     &kp N      &kp M     &kp COMMA   &kp DOT    &kp FSLH
 //╰──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
-   &mt LSHFT UNDER      &kp LGUI        &mt LC(LS(LALT)) BSPC        &mt LC(LS(LALT)) SPACE &mt LG(LC(LS(LALT))) ENTER  &mt RSHFT MINUS
+   &mt LSHIFT UNDER      &kp LGUI        &mt LC(LS(LALT)) BSPC        &mt LC(LS(LALT)) SPACE &mt LG(LC(LS(LALT))) ENTER  &mt RSHIFT MINUS
  //            ╰──────────────┴──────────────┴─────────────────╯    ╰─────────────────────┴───────────────┴───────────────╯
 
             >;
@@ -127,7 +127,7 @@
 //├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
     &kp GRAVE   &none      &none      &none       &none                    &kp LEFT   &kp DOWN    &kp UP   &kp RIGHT   &kp DQT
 //├──────────┼─────────┼───────-───┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤ 
-   &kp TILDE      &none &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &kp LBKT            &kp RBKT  &kp MINUS  &kp EQUAL   &kp SQT   &kp BSLH  
+   &kp TILDE   &none &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &kp LBKT            &kp RBKT  &kp MINUS  &kp EQUAL   &kp SQT   &kp BSLH  
  //╰──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
                   &kp LCTL        &kp LALT       &kp DELETE                  &kp TAB         &kp EQUAL        &kp PLUS
  //            ╰──────────────┴──────────────┴─────────────────╯    ╰─────────────────────┴───────────────┴───────────────╯
