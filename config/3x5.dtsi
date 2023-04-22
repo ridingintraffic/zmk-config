@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+
 #define QWE 0
 #define NAV     1
 #define SYM     2
@@ -52,21 +53,22 @@
         };
     };
 
-    keymap {
+   keymap {
         compatible = "zmk,keymap";
-        
-          qwerty_layer {
-            label = "QWE";
+
+        default_layer {
+            label = "Default";
+
             bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────╮               ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-     &kp Q      &kp W      &kp E      &kp R       &kp T                     &kp Y      &kp U      &kp I      &kp O       &kp P
+    &kp Q       &kp W       &kp E     &kp R      &kp T                      &kp Y      &kp U       &kp I       &kp O    &kp P
 //├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
-   &lt OTH A  &lt SYM S   &lt NAV D &hs LSHIFT F  &kp G              &mt LG(LALT) H  &hs LSHIFT J &lt NAV K &lt SYM L &lt OTH SEMI
+    &lt 3 A     &lt 2 S   &lt 1 D  &hs LSHIFT F  &tdg                       &tdh    &hs RSHFT J   &lt 1 K   &lt 2 L   &lt 3 SEMI
 //├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
-    &kp Z       &kp X       &kp C     &kp V      &kp B                     &kp N      &kp M     &kp COMMA   &kp DOT    &kp FSLH
-//╰──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
-   &mt LSHIFT UNDER      &kp LGUI        &mt LC(LS(LALT)) BSPC        &mt LC(LS(LALT)) SPACE &mt LG(LC(LS(LALT))) ENTER  &mt RSHIFT MINUS
- //            ╰──────────────┴──────────────┴─────────────────╯    ╰─────────────────────┴───────────────┴───────────────╯
+     &kp Z       &kp X     &kp C      &kp V      &kp B                      &kp N      &kp M    &kp COMMA    &kp DOT   &kp FSLH
+//╰──────────┴──────────┴──────────┼──────────┼──────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
+                         &kp LSHFT   &kp LGUI &mt LC(LS(LALT)) BSPC   &mt LC(LS(LALT)) SPACE &lt 3 ENTER     &kp RSHIFT
+//                     ╰───────────┴───────────┴─────────────╯       ╰───────────────────┴───────────────┴───────────────╯
             >;
         };
 
@@ -75,14 +77,14 @@
 
             bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────╮               ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-    &gresc      &none      &none      &kp LBKT   &kp LBRC                     &kp RBRC   &kp RBKT       &none      &none      &none
+ &gresc         &none      &none        &none      &none                     &none      &none       &none      &none         &none  
 //├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
-    &kp GRAVE   &none      &none      &none       &none                    &kp LEFT   &kp DOWN    &kp UP   &kp RIGHT   &kp DQT
-//├──────────┼─────────┼───────-───┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤ 
-   &kp TILDE   &none &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &kp LBKT            &kp RBKT  &kp MINUS  &kp EQUAL   &kp SQT   &kp BSLH  
- //╰──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
-                  &kp LCTL        &kp LALT       &kp DELETE                  &kp TAB         &kp EQUAL        &kp PLUS
- //            ╰──────────────┴──────────────┴─────────────────╯    ╰─────────────────────┴───────────────┴───────────────╯
+ &kp GRAVE     &none  &none  &none  &none                 &kp LEFT  &kp DOWN      &kp UP        &kp RIGHT        &kp SQT
+//├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
+ &kp TILDE  &none &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &kp LBKT         &kp RBKT &kp MINUS &kp KP_PLUS     &kp LBRC  &kp RBRC
+//╰──────────┴──────────┴──────────┼──────────┼──────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
+              &kp LCTL  &kp LALT  &kp DELETE                                        &kp TAB    &kp MINUS   &kp UNDER 
+//                     ╰───────────┴───────────┴─────────────╯       ╰───────────────────┴───────────────┴───────────────╯
                >;
         };
 
@@ -91,30 +93,30 @@
 
             bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────╮               ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-    &kp N1      &kp N2     &kp N3     &kp N4     &kp N5                     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
+     &kp N1     &kp N2     &kp N3     &kp N4     &kp N5       &kp N6     &kp N7     &kp N8     &kp N9     &kp N0 
 //├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
-    &none       &none      &none      &none     &kp LBRC                   &kp RBRC   &trans     &trans     &trans     &kp SQT
+    &trans   &trans &trans   &trans     &trans         &trans    &trans    &trans          &trans    &kp DOUBLE_QUOTES
 //├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
-    &none       &none      &none      &none     &kp LBRC                  &kp RBRC  &kp MINUS  &kp EQUAL   &kp LBKT    &kp PIPE
-//╰──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
-                   &none          &none          &none                &none               &none &none
- //            ╰──────────────┴──────────────┴─────────────────╯    ╰─────────────────────┴───────────────┴───────────────╯
+    &trans   &trans &trans   &trans     &trans         &trans    &trans    &trans          &trans    &trans
+//╰──────────┴──────────┴──────────┼──────────┼──────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
+            &trans        &trans       &trans          &trans &trans &trans
+//                     ╰───────────┴───────────┴─────────────╯       ╰───────────────────┴───────────────┴───────────────╯
                 >;
         };
         oth_layer {
             label = "Other";
 
             bindings = <
-//╭──────────┬──────────┬──────────┬──────────┬──────────╮                         ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-   &kp EXCL     &kp AT    &kp HASH  &kp DOLLAR &kp PRCNT                            &kp CARET   &kp AMPS &kp KP_MULTIPLY &kp LPAR &kp RPAR
-//├──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┤
-  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                     &kp HOME    &kp END  &kp PG_UP &kp PG_DN &rgb_ug RGB_BRI
-//├──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┤
- &rgb_ug RGB_TOG &rgb_ug RGB_EFR &rgb_ug RGB_EFF &rgb_ug RGB_BRI &bootloader  &bootloader &rgb_ug RGB_HUI &rgb_ug RGB_SAI  &none &rgb_ug RGB_BRD
- //╰──────────┴──────────┼──────────┼──────────┼─────────╯                         ╰─────────┼───────────┼──────────┼──────────┼──────────╯
-                    &none       &rgb_ug RGB_EFF &rgb_ug RGB_BRD                  &rgb_ug RGB_HUD    &rgb_ug RGB_SAD   &none
- //            ╰──────────────┴──────────────┴─────────────────╯              ╰─────────────────────┴───────────────┴───────────────╯
-                >; 
+//╭──────────┬──────────┬──────────┬──────────┬──────────╮               ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+     &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR
+//├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
+    &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3   &trans &trans &trans &trans &trans
+//├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
+    &out OUT_USB  &out OUT_BLE    &trans  &trans &bootloader  &bootloader &trans  &trans &trans &trans
+//╰──────────┴──────────┴──────────┼──────────┼──────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
+            &trans    &kp LGUI  &trans        &trans &trans &trans
+//                     ╰───────────┴───────────┴─────────────╯       ╰───────────────────┴───────────────┴───────────────╯
+                >;
         };
     };
 };
