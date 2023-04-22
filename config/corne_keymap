@@ -1,0 +1,108 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/outputs.h>
+
+
+#define TAPPING_TERM 200
+#define QUICK_TAP    100
+
+#define DEFAULT 0
+#define NAV     1
+#define SYM     2
+#define OTH     3
+
+
+&mt {
+	flavor = "tap-preferred";
+	tapping-term-ms = <TAPPING_TERM>;
+};
+
+&lt {
+	flavor = "tap-preferred";
+	tapping-term-ms = <TAPPING_TERM>;
+};
+/ {
+
+    behaviors {
+        hm: layer_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            quick_tap_ms = <QUICK_TAP>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        hs: homerow_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_SHIFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            quick_tap_ms = <QUICK_TAP>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+    };
+
+        keymap {
+                compatible = "zmk,keymap";
+
+                default_layer {
+                    label = "Default";
+                        bindings = <
+//╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
+    &gresc      &kp Q      &kp W       &kp E      &kp R      &kp T                    &kp Y       &kp U       &kp I     &kp O       &kp P    &kp MINUS
+//├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+    &kp TAB   &lt OTH A  &lt SYM S   &lt NAV D &hs LSHIFT F  &kp G                 &mt LG(LALT) H  &hs LSHIFT J   &lt NAV K &lt SYM L &lt OTH SEMI &kp SQT
+//├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+   &kp LSHFT &mt LSHIFT Z &kp X        &kp C      &kp V      &kp B                     &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp BSLH
+//╰──────────┴──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼─────────────────┼───────────────┼─────────┼──────────╯
+                        &mt LSHFT UNDER  &kp LGUI  &mt LC(LS(LALT)) BSPC     &mt LC(LS(LALT)) SPACE &mt LG(LC(LS(LALT))) ENTER  &mt RSHFT MINUS
+//                            ╰──────────────┴──────────────┴─────────────────╯    ╰─────────────────────┴───────────────┴───────────────╯
+                        >;
+                };
+                nav_layer {
+                    label = "Navigation";
+                        bindings = <
+//╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
+   &kp GRAVE    &gresc     &none      &none     &kp LBKT   &kp LBRC                   &kp RBRC   &kp RBKT       &none      &none      &none      &none
+//├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+   &kp GRAVE  &kp GRAVE   &none       &none      &none       &none                    &kp LEFT   &kp DOWN    &kp UP    &kp RIGHT  &kp DQT   &kp TILDE
+//├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+     &none    &kp TILDE &none &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &kp LBKT          &kp RBKT  &kp MINUS  &kp EQUAL   &kp SQT   &kp BSLH   &kp PIPE
+ //╰──────────┴──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼─────────────────┼───────────────┼─────────┼──────────╯
+                                      &kp LCTL  &kp LALT   &kp BSLH                   &kp TAB    &kp EQUAL &kp PLUS
+   //                               ╰─────────┴─────────┴───────────╯               ╰─────────┴───────────────┴───────────────╯
+
+                        >;
+                };
+
+                sym_layer {
+                    label = "Symbols";
+                        bindings = <
+&kp TILDE &kp N1  &kp N2  &kp N3  &kp N4  &kp N5              &kp N6    &kp N7     &kp N8     &kp N9     &kp N0    &trans
+&kp TILDE &none  &none  &none  &none  &kp LBRC            &kp RBRC  &trans     &trans     &trans     &kp SQT   &trans
+&trans    &none  &none  &none  &none  &kp LBRC            &kp RBRC  &kp MINUS  &kp EQUAL  &kp LBKT   &kp PIPE  &kp BSLH
+                &kp LCTL  &kp LALT    &kp BSPC           &trans    &kp EQUAL &kp PLUS
+                        >;
+                };
+        oth_layer {
+            label = "Other";
+            bindings = <
+    &trans  &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PRCNT                            &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR &none
+    &trans  &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3        &kp HOME  &kp END   &kp PG_UP     &kp PG_DN &trans   &trans
+    &trans  &trans  &trans  &trans  &trans  &bootloader                           &bootloader    &trans   &trans          &trans    &trans   &trans
+            &trans    &kp LGUI  &kp BSPC        &kp EQUAL &kp PLUS &trans
+                >;
+        };
+    };
+};

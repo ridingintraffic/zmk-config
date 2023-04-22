@@ -1,0 +1,120 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+#define QWE 0
+#define NAV     1
+#define SYM     2
+#define OTH     3
+
+#define TAPPING_TERM 200
+#define QUICK_TAP    100
+
+// Desktop and tab navigation shortcuts
+#define MEH    LC(LS(LALT))
+#define HYP    LG(LC(LS(LALT)))
+
+// Key position groups
+#define KEYS_L 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24
+#define KEYS_R 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29
+
+
+&mt {
+    flavor = "tap-preferred";
+	tapping-term-ms = <TAPPING_TERM>;
+};
+
+&lt {
+    flavor = "tap-preferred";
+	tapping-term-ms = <TAPPING_TERM>;
+};
+
+
+/ {
+    behaviors {
+        hm: layer_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            quick_tap_ms = <QUICK_TAP>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        hs: homerow_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_SHIFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            quick_tap_ms = <QUICK_TAP>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+        
+          qwerty_layer {
+            label = "QWE";
+            bindings = <
+//╭──────────┬──────────┬──────────┬──────────┬──────────╮               ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+     &kp Q      &kp W      &kp E      &kp R       &kp T                     &kp Y      &kp U      &kp I      &kp O       &kp P
+//├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
+   &lt OTH A  &lt SYM S   &lt NAV D &hs LSHIFT F  &kp G              &mt LG(LALT) H  &hs LSHIFT J &lt NAV K &lt SYM L &lt OTH SEMI
+//├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
+    &kp Z       &kp X       &kp C     &kp V      &kp B                     &kp N      &kp M     &kp COMMA   &kp DOT    &kp FSLH
+//╰──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
+   &mt LSHIFT UNDER      &kp LGUI        &mt LC(LS(LALT)) BSPC        &mt LC(LS(LALT)) SPACE &mt LG(LC(LS(LALT))) ENTER  &mt RSHIFT MINUS
+ //            ╰──────────────┴──────────────┴─────────────────╯    ╰─────────────────────┴───────────────┴───────────────╯
+            >;
+        };
+
+        nav_layer {
+            label = "Navigation";
+
+            bindings = <
+//╭──────────┬──────────┬──────────┬──────────┬──────────╮               ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+    &gresc      &none      &none      &kp LBKT   &kp LBRC                     &kp RBRC   &kp RBKT       &none      &none      &none
+//├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
+    &kp GRAVE   &none      &none      &none       &none                    &kp LEFT   &kp DOWN    &kp UP   &kp RIGHT   &kp DQT
+//├──────────┼─────────┼───────-───┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤ 
+   &kp TILDE   &none &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &kp LBKT            &kp RBKT  &kp MINUS  &kp EQUAL   &kp SQT   &kp BSLH  
+ //╰──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
+                  &kp LCTL        &kp LALT       &kp DELETE                  &kp TAB         &kp EQUAL        &kp PLUS
+ //            ╰──────────────┴──────────────┴─────────────────╯    ╰─────────────────────┴───────────────┴───────────────╯
+               >;
+        };
+
+        sym_layer {
+            label = "Symbols";
+
+            bindings = <
+//╭──────────┬──────────┬──────────┬──────────┬──────────╮               ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+    &kp N1      &kp N2     &kp N3     &kp N4     &kp N5                     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
+//├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
+    &none       &none      &none      &none     &kp LBRC                   &kp RBRC   &trans     &trans     &trans     &kp SQT
+//├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
+    &none       &none      &none      &none     &kp LBRC                  &kp RBRC  &kp MINUS  &kp EQUAL   &kp LBKT    &kp PIPE
+//╰──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
+                   &none          &none          &none                &none               &none &none
+ //            ╰──────────────┴──────────────┴─────────────────╯    ╰─────────────────────┴───────────────┴───────────────╯
+                >;
+        };
+        oth_layer {
+            label = "Other";
+
+            bindings = <
+//╭──────────┬──────────┬──────────┬──────────┬──────────╮                         ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+   &kp EXCL     &kp AT    &kp HASH  &kp DOLLAR &kp PRCNT                            &kp CARET   &kp AMPS &kp KP_MULTIPLY &kp LPAR &kp RPAR
+//├──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┤
+  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                     &kp HOME    &kp END  &kp PG_UP &kp PG_DN &rgb_ug RGB_BRI
+//├──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┤
+ &rgb_ug RGB_TOG &rgb_ug RGB_EFR &rgb_ug RGB_EFF &rgb_ug RGB_BRI &bootloader  &bootloader &rgb_ug RGB_HUI &rgb_ug RGB_SAI  &none &rgb_ug RGB_BRD
+ //╰──────────┴──────────┼──────────┼──────────┼─────────╯                         ╰─────────┼───────────┼──────────┼──────────┼──────────╯
+                    &none       &rgb_ug RGB_EFF &rgb_ug RGB_BRD                  &rgb_ug RGB_HUD    &rgb_ug RGB_SAD   &none
+ //            ╰──────────────┴──────────────┴─────────────────╯              ╰─────────────────────┴───────────────┴───────────────╯
+                >; 
+        };
+    };
+};
