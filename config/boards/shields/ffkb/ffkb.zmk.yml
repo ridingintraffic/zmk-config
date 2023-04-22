@@ -3,7 +3,12 @@ id: ffkb
 name: ffkb
 type: shield
 url: https://github.com/sadekbaroudi/ffkb/
-requires: [pro_micro]
+requires:
+  - pro_micro
+exposes:
+  - i2c_oled
 features:
   - keys
   - encoder
+  - display
+  - underglow
