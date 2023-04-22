@@ -21,33 +21,26 @@
 	flavor = "tap-preferred";
 	tapping-term-ms = <TAPPING_TERM>;
 };
-&caps_word {
-    continue-list = <UNDERSCORE MINUS>;
-};
 
 / {
     behaviors {
-        q_tab: q_tab {
-            compatible = "zmk,behavior-mod-morph";
-            label = "q_tab";
-            #binding-cells = <0>;
-            bindings = <&kp Q>, <&kp TAB>;
-            mods = <(MOD_LGUI|MOD_RGUI)>;
-            keep-mods = <(MOD_LGUI)>;
+        hm: layer_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            quick_tap_ms = <QUICK_TAP>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
         };
-        tdg: tap_dance_g {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_G";
-            #binding-cells = <0>;
-            tapping-term-ms = <QUICK_TAP>;
-            bindings = <&kp G>, <&caps_word>;
-        };
-        tdh: tap_dance_h {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_M";
-            #binding-cells = <0>;
-            tapping-term-ms = <QUICK_TAP>;
-            bindings = <&kp H>, <&caps_word>;
+        hs: homerow_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_SHIFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            quick_tap_ms = <QUICK_TAP>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
         };
     };
 };
@@ -112,7 +105,7 @@
 //├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
     &kp Z       &kp X       &kp C     &kp V      &kp B                     &kp N      &kp M     &kp COMMA   &kp DOT    &kp FSLH
 //╰──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
-   &mt LSHFT UNDER      &kp LGUI        &mt LC(LS(LALT)) BSPC        &mt LC(LS(LALT)) SPACE &mt LG(LC(LS(LALT))) ENTER  &mt RSHFT MINUS
+   &mt LSHFT UNDER      &kp LGUI      &mt LC(LS(LALT)) BSPC        &mt LC(LS(LALT)) SPACE &mt LG(LC(LS(LALT))) ENTER  &mt RSHFT MINUS
  //            ╰──────────────┴──────────────┴─────────────────╯    ╰─────────────────────┴───────────────┴───────────────╯
 
             >;
@@ -127,7 +120,7 @@
 //├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
     &kp GRAVE   &none      &none      &none       &none                    &kp LEFT   &kp DOWN    &kp UP   &kp RIGHT   &kp DQT
 //├──────────┼─────────┼───────-───┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤ 
-   &kp TILDE      &none &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &kp LBKT            &kp RBKT  &kp MINUS  &kp EQUAL   &kp SQT   &kp BSLH  
+   &kp TILDE   &none  &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &kp LBKT            &kp RBKT  &kp MINUS  &kp EQUAL   &kp SQT   &kp BSLH  
  //╰──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
                   &kp LCTL        &kp LALT       &kp DELETE                  &kp TAB         &kp EQUAL        &kp PLUS
  //            ╰──────────────┴──────────────┴─────────────────╯    ╰─────────────────────┴───────────────┴───────────────╯
@@ -141,7 +134,7 @@
 //╭──────────┬──────────┬──────────┬──────────┬──────────╮               ╭──────────┬──────────┬──────────┬──────────┬──────────╮
     &kp N1      &kp N2     &kp N3     &kp N4     &kp N5                     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
 //├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
-    &none       &none      &none      &none     &kp LBRC                   &kp RBRC   &trans     &trans     &trans     &kp DQT
+    &none       &none      &none      &none     &kp LBRC                   &kp RBRC   &trans     &trans     &trans     &kp SQT
 //├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
     &none       &none      &none      &none     &kp LBRC                  &kp RBRC  &kp MINUS  &kp EQUAL   &kp LBKT    &kp PIPE
 //╰──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
@@ -158,11 +151,11 @@
 //├──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┤
   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                     &kp HOME    &kp END  &kp PG_UP &kp PG_DN &rgb_ug RGB_BRI
 //├──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┤
- &rgb_ug RGB_TOG &rgb_ug RGB_EFR &rgb_ug RGB_EF &rgb_ug RGB_BRI &bootloader  &bootloader &rgb_ug RGB_HUI &rgb_ug RGB_SAI  &none &rgb_ug RGB_BRD
+ &rgb_ug RGB_TOG &rgb_ug RGB_EFR &rgb_ug RGB_EFF &rgb_ug RGB_BRI &bootloader       &bootloader &rgb_ug RGB_HUI &rgb_ug RGB_SAI  &none &rgb_ug RGB_BRD
  //╰──────────┴──────────┼──────────┼──────────┼─────────╯                         ╰─────────┼───────────┼──────────┼──────────┼──────────╯
                     &none       &rgb_ug RGB_EFF &rgb_ug RGB_BRD                  &rgb_ug RGB_HUD    &rgb_ug RGB_SAD   &none
  //            ╰──────────────┴──────────────┴─────────────────╯              ╰─────────────────────┴───────────────┴───────────────╯
-                >;
+                >; 
         };
     };
 };
