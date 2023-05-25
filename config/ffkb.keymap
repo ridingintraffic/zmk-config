@@ -126,8 +126,8 @@
 
             bindings = <
     &kp TILDE   &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                    &kp N6 &kp N7     &kp N8     &kp N9     &kp N0    &kp EQUAL
-    &kp TILDE     &none    &none &none &none &kp LBRC                &trans           &kp RBRC    &none   &none          &trans    &kp DOUBLE_QUOTES    &trans
-    &kp LSHIFT &out OUT_USB  &out OUT_BLE       &trans      &trans       &kp LBRC                                &rgb_ug RGB_TOG &rgb_ug RGB_EFR  &rgb_ug RGB_EFF &rgb_ug RGB_BRI &rgb_ug RGB_BRD     &trans
+    &kp TILDE   &rgb_ug RGB_TOG &rgb_ug RGB_EFR &rgb_ug RGB_HUI &rgb_ug RGB_BRI   &trans           &kp RBRC    &none   &none          &trans    &kp DOUBLE_QUOTES    &trans
+    &kp LSHIFT &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_HUD &rgb_ug RGB_BRD   &trans                               &rgb_ug RGB_TOG &rgb_ug RGB_EFR  &rgb_ug RGB_EFF &rgb_ug RGB_BRI &rgb_ug RGB_BRD     &trans
                                         &trans      &trans        &kp LALT      &kp BSPC        &kp LC(LEFT)   &kp LC(UP)    &kp LC(RIGHT)      &trans
             >;
         };
