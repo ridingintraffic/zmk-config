@@ -26,7 +26,16 @@
 	flavor = "tap-preferred";
 	tapping-term-ms = <TAPPING_TERM>;
 };
+ chosen {
+/ {
+    zmk,battery = &vbatt;
+  };
 
+  vbatt: vbatt {
+      compatible = "zmk,battery-nrf-vddh";
+      label = "VBATT";
+    };
+  };
 / {
     behaviors {
         hm: layer_mods {
