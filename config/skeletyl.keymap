@@ -46,7 +46,6 @@
             bindings = <&kp>, <&kp>;
         };
     };
-};
 
   macros {
     arrow: arrow {
@@ -63,27 +62,6 @@
     };
   };
 
-  combos {
-      compatible = "zmk,combos";
-      combo_caps_word {
-          timeout-ms = <50>;
-          key-positions = <6 7 8>;
-          bindings = <&caps_word>;
-          layers = <0>;
-      };
-      combo_arrow {
-          timeout-ms = <50>;
-          key-positions = <1 2>;
-          bindings = <&arrow>;
-          layers = <0>;
-      };
-      combo_fat_arrow {
-          timeout-ms = <50>;
-          key-positions = <2 3>;
-          bindings = <&fat_arrow>;
-          layers = <0>;
-      };
-  };
 
  keymap {
         compatible = "zmk,keymap";
