@@ -1,13 +1,17 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
 #define NAV     1
 #define SYM     2
 #define OTH     3
+
+#define RGB_UG_TOG &rgb_ug RGB_TOG
+
 
 #define TAPPING_TERM 200
 #define QUICK_TAP    100
@@ -43,55 +47,24 @@
             bindings = <&kp>, <&kp>;
         };
     };
-};
 
-/ {
-    combos {
-        compatible = "zmk,combos";
-        combo_undo {
-            timeout-ms = <50>;
-            key-positions = <20 21>;
-            bindings = <&kp LC(Z)>;
-        };
-        combo_q {
-            timeout-ms = <50>;
-            key-positions = <21 22>;
-            bindings = <&kp Q>;
-        };
-        combo_semicolon {
-            timeout-ms = <50>;
-            key-positions = <27 28>;
-            bindings = <&kp SEMI>;
-        };
+  macros {
+    arrow: arrow {
+      label = "Arrow";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_tap &kp MINUS &kp GT>;
     };
-};
-
-/ {
-
-    behaviors {
-        hm: layer_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-        hs: homerow_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_SHIFT";
-            #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
+    fat_arrow: fat_arrow {
+      label = "Fat_Arrow";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_tap &kp EQUAL &kp GT>;
     };
+  };
 
 
-
-    keymap {
+ keymap {
         compatible = "zmk,keymap";
 
         default_layer {
