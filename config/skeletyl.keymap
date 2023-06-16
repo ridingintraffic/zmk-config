@@ -19,11 +19,14 @@
 &lt {
 	flavor = "tap-preferred";
 	tapping-term-ms = <TAPPING_TERM>;
+    quick-tap-ms = <QUICK_TAP>;
 };
 
 &mt {
 	flavor = "tap-preferred";
 	tapping-term-ms = <TAPPING_TERM>;
+    quick-tap-ms = <QUICK_TAP>;
+
 };
 
 / {
