@@ -95,11 +95,25 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+        tdclr: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&none>, <&bt BT_CLR>;
+        };
+        tdrst: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&none>, <&bootloader>;
+        };
     };
 
 
 
-    keymap {
+  keymap {
         compatible = "zmk,keymap";
 
         default_layer {
@@ -111,9 +125,9 @@
 //├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
    &lt OTH A  &lt SYM S   &lt NAV D &hs LSHIFT F  &kp G              &mt LG(LALT) H  &hs LSHIFT J &lt NAV K &lt SYM L &lt OTH SEMI
 //├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
-    &kp Z       &kp X   &mt LCTL C &mt LALT V &mt LGUI B                      &kp N      &kp M     &kp COMMA   &kp DOT    &kp FSLH
+&mt LSHIFT Z       &kp X     &mt LCTL C &mt LALT V &mt LGUI B              &mt RCTL N &mt RALT M &mt RGUI COMMA &kp DOT   &mt RSHIFT FSLH
 //╰──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
-                 &kp LSHIFT      &kp LGUI       &kp BACKSPACE       &mt LC(LS(LALT)) SPACE &lt 3 ENTER       &kp RSHIFT
+   &mt LSHIFT UNDER      &kp LGUI    &mt LC(LS(LALT)) BSPC        &mt LC(LS(LALT)) SPACE &mt LG(LC(LS(LALT))) ENTER  &mt RSHIFT MINUS
  //            ╰──────────────┴──────────────┴─────────────────╯    ╰─────────────────────┴───────────────┴───────────────╯
 
             >;
@@ -124,11 +138,11 @@
 
             bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────╮               ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-    &gresc      &none      &none      &none      &none                      &none      &none      &none      &none      &none
+    &gresc      &none      &none      &kp LBKT   &kp LBRC                     &kp RBRC   &kp RBKT       &none      &none      &none
 //├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
-    &kp GRAVE   &none      &none      &none       &none                    &kp LEFT   &kp DOWN    &kp UP   &kp RIGHT   &kp SQT
+    &kp GRAVE   &none      &none      &none       &none                    &kp LEFT   &kp DOWN    &kp UP   &kp RIGHT   &kp DQT
 //├──────────┼─────────┼───────-───┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
-&kp TILDE &none &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &kp LBKT            &kp RBKT   &kp MINUS   &kp EQUAL  &kp SQT    &kp BSLH
+   &kp TILDE   &none &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &kp LBKT            &kp RBKT  &kp MINUS  &kp EQUAL   &kp SQT   &kp BSLH
  //╰──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
                   &kp LCTL        &kp LALT       &kp DELETE                  &kp TAB         &kp EQUAL        &kp PLUS
  //            ╰──────────────┴──────────────┴─────────────────╯    ╰─────────────────────┴───────────────┴───────────────╯
@@ -142,7 +156,7 @@
 //╭──────────┬──────────┬──────────┬──────────┬──────────╮               ╭──────────┬──────────┬──────────┬──────────┬──────────╮
     &kp N1      &kp N2     &kp N3     &kp N4     &kp N5                     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
 //├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
-    &none       &none      &none      &none     &kp LBRC                   &kp RBRC   &trans     &trans     &trans     &kp DQT
+    &none       &none      &none      &none     &kp LBRC                   &kp RBRC   &trans     &trans     &trans     &kp SQT
 //├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
     &none       &none      &none      &none     &kp LBRC                  &kp RBRC  &kp MINUS  &kp EQUAL   &kp LBKT    &kp PIPE
 //╰──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
@@ -154,15 +168,15 @@
             label = "Other";
 
             bindings = <
-//╭──────────┬──────────┬──────────┬──────────┬──────────╮               ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-   &kp EXCL     &kp AT    &kp HASH  &kp DOLLAR &kp PRCNT                  &kp CARET   &kp AMPS &kp KP_MULTIPLY &kp LPAR &kp RPAR
-//├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
-  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3           &kp HOME    &kp END   &kp PG_UP &kp PG_DN    &none
-//├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
-     &none       &none       &none      &none  &bootloader               &bootloader  &none       &none      &none      &none
- //╰──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
-                    &none         &none            &none                  &none                &none           &none
- //            ╰──────────────┴──────────────┴─────────────────╯    ╰─────────────────────┴───────────────┴───────────────╯
+//╭──────────┬──────────┬──────────┬──────────┬──────────╮                         ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+   &kp EXCL     &kp AT    &kp HASH  &kp DOLLAR &kp PRCNT                            &kp CARET   &kp AMPS &kp KP_MULTIPLY &kp LPAR &kp RPAR
+//├──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┤
+  &tdclr &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                     &kp HOME    &kp END  &kp PG_UP &kp PG_DN &rgb_ug RGB_BRI
+//├──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┤
+     &none       &none      &none      &none   &tdrst                               &tdrst &none       &none      &none      &none 
+ //╰──────────┴──────────┼──────────┼──────────┼─────────╯                         ╰─────────┼───────────┼──────────┼──────────┼──────────╯
+                    &none             &none        &none                          &none     &none       &none
+ //            ╰──────────────┴──────────────┴─────────────────╯              ╰─────────────────────┴───────────────┴───────────────╯
                 >;
         };
     };
