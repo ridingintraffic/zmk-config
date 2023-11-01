@@ -106,7 +106,7 @@
 
             bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────╮               ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-    &gresc      &none      &none      &kp LBKT   &kp LBRC                     &kp RBRC   &kp RBKT       &none      &none      &none
+    &gresc  &kp C_VOL_DN  &kp C_VOL_UP &kp LBKT   &kp LBRC                     &kp RBRC   &kp RBKT       &none      &none      &kp C_PLAY_PAUSE
 //├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
     &kp GRAVE   &none      &none      &none       &none                    &kp LEFT   &kp DOWN    &kp UP   &kp RIGHT   &kp DQT
 //├──────────┼─────────┼───────-───┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
