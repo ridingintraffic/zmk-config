@@ -12,7 +12,7 @@
 
 
 #define TAPPING_TERM 200
-#define QUICK_TAP    150
+#define QUICK_TAP    200
 
 &lt {
 	flavor = "tap-preferred";
