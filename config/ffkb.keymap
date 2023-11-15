@@ -115,7 +115,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "RGB_ENCODER";
             #sensor-binding-cells = <0>;
-            bindings = <&rgb_ug RGB_TOG>, <&rgb_ug TOG>;
+            bindings = <&rgb_ug RGB_TOG>, <&rgb_ug RGB_TOG>;
         };
     };
 
