@@ -113,7 +113,7 @@
         default_layer {
             label = "Default";
 
-            sensor-bindings = <&rgb_ug RGB_BRD  RGB_BRI &inc_dec_kp LC(RIGHT)  LC(LEFT) &inc_dec_kp LC(RIGHT)  LC(LEFT) >;
+            sensor-bindings = <&inc_dec_kp RGB_BRD  RGB_BRI &inc_dec_kp LC(RIGHT)  LC(LEFT) &inc_dec_kp LC(RIGHT)  LC(LEFT) >;
 
             bindings = <
     &gresc     &kp Q         &kp W        &kp E       &kp R         &kp T                              &kp Y        &kp U          &kp I       &kp O         &kp P         &kp MINUS
@@ -138,7 +138,7 @@
         lower_layer {
             label = "Lower  ";
 
-            sensor-bindings = <&rgb_ug RGB_BRD  RGB_BRI &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp RGB_BRD  RGB_BRI &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
 
             bindings = <
     &kp TILDE   &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                    &kp N6 &kp N7     &kp N8     &kp N9     &kp N0    &kp EQUAL
