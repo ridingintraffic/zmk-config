@@ -111,6 +111,12 @@
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
         };
+        rgb_toggle: rgb_toggle {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "RGB_ENCODER";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_TOG>, <&rgb_ug TOG>;
+        };
     };
 
     keymap {
@@ -119,7 +125,7 @@
         default_layer {
             label = "Default";
 
-            sensor-bindings = <&rgb_encoder &inc_dec_kp LC(RIGHT)  LC(LEFT) &inc_dec_kp LC(RIGHT)  LC(LEFT) >;
+            sensor-bindings = <&rgb_encoder &inc_dec_kp LC(RIGHT)  LC(LEFT) &rgb_toggle >;
 
             bindings = <
     &gresc     &kp Q         &kp W        &kp E       &kp R         &kp T                              &kp Y        &kp U          &kp I       &kp O         &kp P         &kp MINUS
