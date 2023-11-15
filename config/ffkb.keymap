@@ -105,6 +105,12 @@
             tapping-term-ms = <QUICK_TAP>;
             bindings = <&kp H>, <&caps_word>;
         };
+        rgb_encoder: rgb_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "RGB_ENCODER";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
+        };
     };
 
     keymap {
@@ -113,7 +119,7 @@
         default_layer {
             label = "Default";
 
-            sensor-bindings = <&inc_dec_kp RGB_BRD  RGB_BRI &inc_dec_kp LC(RIGHT)  LC(LEFT) &inc_dec_kp LC(RIGHT)  LC(LEFT) >;
+            sensor-bindings = <&rgb_encoder &inc_dec_kp LC(RIGHT)  LC(LEFT) &inc_dec_kp LC(RIGHT)  LC(LEFT) >;
 
             bindings = <
     &gresc     &kp Q         &kp W        &kp E       &kp R         &kp T                              &kp Y        &kp U          &kp I       &kp O         &kp P         &kp MINUS
