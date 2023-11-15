@@ -102,6 +102,20 @@
             tapping-term-ms = <QUICK_TAP>;
             bindings = <&kp H>, <&caps_word>;
         };
+        tdclr: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&none>, <&bt BT_CLR>;
+        };
+        tdrst: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&none>, <&bootloader>;
+        };
     };
 
 
