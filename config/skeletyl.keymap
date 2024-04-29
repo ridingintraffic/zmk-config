@@ -9,6 +9,7 @@
 #define NAV     1
 #define SYM     2
 #define OTH     3
+#define NUM     4
 
 #define RGB_UG_TOG &rgb_ug RGB_TOG
 
@@ -93,7 +94,7 @@
 //├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
    &lt OTH A  &lt SYM S   &lt NAV D &hs LSHIFT F  &kp G              &mt LG(LALT) H  &hs LSHIFT J &lt NAV K &lt SYM L &lt OTH SEMI
 //├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
-&mt LSHIFT Z       &kp X     &mt LCTL C &mt LALT V &mt LGUI B              &mt RCTL N &mt RALT M &mt RGUI COMMA &kp DOT   &mt RSHIFT FSLH
+&mt LSHIFT Z       &kp X     &mt LCTL C &mt LALT V &lt NUM B              &mt RCTL N &mt RALT M &mt RGUI COMMA &kp DOT   &mt RSHIFT FSLH
 //╰──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
    &mt LSHIFT UNDER      &kp LGUI    &mt LC(LS(LALT)) BSPC        &mt LC(LS(LALT)) SPACE &mt LG(LC(LS(LALT))) ENTER  &mt RSHIFT MINUS
  //            ╰──────────────┴──────────────┴─────────────────╯    ╰─────────────────────┴───────────────┴───────────────╯
@@ -144,6 +145,21 @@
    &rgb_ug RGB_TOG &rgb_ug RGB_EFR &rgb_ug RGB_EFF &rgb_ug RGB_BRI &tdrst &tdrst &rgb_ug RGB_HUI &rgb_ug RGB_SAI &none &rgb_ug RGB_BRD
  //╰──────────┴──────────┼──────────┼──────────┼─────────╯                         ╰─────────┼───────────┼──────────┼──────────┼──────────╯
                     &none       &rgb_ug RGB_EFF &rgb_ug RGB_BRD                  &rgb_ug RGB_HUD    &rgb_ug RGB_SAD   &ext_power EP_TOG
+ //            ╰──────────────┴──────────────┴─────────────────╯              ╰─────────────────────┴───────────────┴───────────────╯
+                >;
+        };
+        numpad_layer {
+            label = "numpad";
+
+            bindings = <
+//╭──────────┬──────────┬──────────┬──────────┬──────────╮                         ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+   &kp EXCL     &kp AT    &kp HASH  &kp DOLLAR &kp PRCNT                            &kp N7     &kp N8     &kp N9       &kp LPAR &kp RPAR
+//├──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┤
+  &tdclr &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                        &kp N4       &kp N5     &kp N6   &kp PG_DN &rgb_ug RGB_BRI
+//├──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┤
+ &rgb_ug RGB_TOG &rgb_ug RGB_EFR &rgb_ug RGB_EFF &rgb_ug RGB_BRI &tdrst             &kp N1       &kp N2     &kp N3  &none &rgb_ug RGB_BRD
+ //╰──────────┴──────────┼──────────┼──────────┼─────────╯                         ╰─────────┼───────────┼──────────┼──────────┼──────────╯
+                    &none       &rgb_ug RGB_EFF &rgb_ug RGB_BRD                  &kp N0     &kp DOT   &kp ENTER
  //            ╰──────────────┴──────────────┴─────────────────╯              ╰─────────────────────┴───────────────┴───────────────╯
                 >;
         };
