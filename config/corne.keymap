@@ -19,7 +19,7 @@
 #define NAV     1
 #define SYM     2
 #define OTH     3
-#define NPD     4
+#define PAD     4
 
 
 
@@ -83,7 +83,7 @@
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
     &tog SW2   &lt OTH A  &lt SYM S   &lt NAV D &hs LSHIFT F  &kp G                 &mt LG(LALT) H  &hs LSHIFT J   &lt NAV K &lt SYM L &lt OTH SEMI &kp SQT
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-   &tog SW3 &mt LSHIFT Z &kp X     &mt LCTL C &mt LALT V  &lt NPD B                      &kp N  &kp M    &kp COMMA &kp DOT &mt RSHIFT FSLH &kp BSLH
+   &tog SW3 &mt LSHIFT Z &kp X     &mt LCTL C &mt LALT V  &lt PAD B                      &kp N  &kp M    &kp COMMA &kp DOT &mt RSHIFT FSLH &kp BSLH
 //╰──────────┴──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼─────────────────┼───────────────┼─────────┼──────────╯
                         &mt LSHFT UNDER  &kp LGUI  &mt LC(LS(LALT)) BSPC     &mt LC(LS(LALT)) SPACE &mt LG(LC(LS(LALT))) ENTER  &mt RSHFT MINUS
 //                            ╰──────────────┴──────────────┴─────────────────╯    ╰─────────────────────┴───────────────┴───────────────╯
