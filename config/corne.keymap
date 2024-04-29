@@ -23,7 +23,6 @@
 
 
 
-
 &mt {
 	flavor = "tap-preferred";
 	tapping-term-ms = <TAPPING_TERM>;
@@ -84,7 +83,7 @@
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
     &tog SW2   &lt OTH A  &lt SYM S   &lt NAV D &hs LSHIFT F  &kp G                 &mt LG(LALT) H  &hs LSHIFT J   &lt NAV K &lt SYM L &lt OTH SEMI &kp SQT
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-   &tog SW3 &mt LSHIFT Z &kp X     &mt LCTL C &mt LALT V &lt NPD B                      &kp N  &kp M    &kp COMMA &kp DOT &mt RSHIFT FSLH &kp BSLH
+   &tog SW3 &mt LSHIFT Z &kp X     &mt LCTL C &mt LALT V  &lt NPD B                      &kp N  &kp M    &kp COMMA &kp DOT &mt RSHIFT FSLH &kp BSLH
 //╰──────────┴──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼─────────────────┼───────────────┼─────────┼──────────╯
                         &mt LSHFT UNDER  &kp LGUI  &mt LC(LS(LALT)) BSPC     &mt LC(LS(LALT)) SPACE &mt LG(LC(LS(LALT))) ENTER  &mt RSHFT MINUS
 //                            ╰──────────────┴──────────────┴─────────────────╯    ╰─────────────────────┴───────────────┴───────────────╯
@@ -130,7 +129,8 @@
                 >;
         };
          npd_layer {
-            label = "numpad";
+            label = "Numpad";
+            bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
    &kp ESC  &gresc  &kp C_VOL_DN &kp C_VOL_UP &kp LBKT   &kp LBRC                      &kp N7   &kp N8     &kp N8   &none       &none   &kp C_PLAY_PAUSE
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
