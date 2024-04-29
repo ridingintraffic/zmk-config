@@ -150,7 +150,6 @@
         };
         numpad_layer {
             label = "numpad";
-
             bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────╮                         ╭──────────┬──────────┬──────────┬──────────┬──────────╮
    &kp EXCL     &kp AT    &kp HASH  &kp DOLLAR &kp PRCNT                            &kp N7     &kp N8     &kp N9       &kp LPAR &kp RPAR

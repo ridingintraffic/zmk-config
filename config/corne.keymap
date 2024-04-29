@@ -128,13 +128,13 @@
             &trans    &kp LGUI  &kp BSPC        &kp EQUAL &kp PLUS &trans
                 >;
         };
-         npd_layer {
-            label = "Numpad";
-            bindings = <
+        npd_layer {
+                    label = "Numpad";
+                        bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-   &kp ESC  &gresc  &kp C_VOL_DN &kp C_VOL_UP &kp LBKT   &kp LBRC                      &kp N7   &kp N8     &kp N8   &none       &none   &kp C_PLAY_PAUSE
+   &kp ESC  &gresc  &kp C_VOL_DN &kp C_VOL_UP &kp LBKT   &kp LBRC                   &kp N7   &kp N8     &kp N9    &none       &none   &kp C_PLAY_PAUSE
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-   &kp GRAVE  &kp GRAVE   &none       &none      &none       &none                    &kp N4   &kp N5    &kp N6    &kp RIGHT  &kp DQT   &kp TILDE
+   &kp GRAVE  &kp GRAVE   &none       &none      &none       &none                    &kp N4  &kp N5    &kp N6    &kp RIGHT  &kp DQT   &kp TILDE
 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
      &none    &kp TILDE &none &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4))) &kp LBKT          &kp N1  &kp N2  &kp N3   &kp SQT   &kp BSLH   &kp PIPE
  //╰──────────┴──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼─────────────────┼───────────────┼─────────┼──────────╯
