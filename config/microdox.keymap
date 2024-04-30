@@ -9,6 +9,7 @@
 #define SYM     2
 #define OTH     3
 #define NUM     4
+#define SIN     5
 
 #define TAPPING_TERM 200
 #define QUICK_TAP    100
@@ -122,7 +123,7 @@
 //├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
    &lt OTH A  &lt SYM S   &lt NAV D &hs LSHIFT F  &kp G              &mt LG(LALT) H  &hs LSHIFT J &lt NAV K &lt SYM L &lt OTH SEMI
 //├──────────┼──────────┼──────────┼──────────┼──────────┤               ├──────────┼──────────┼──────────┼──────────┼──────────┤
-&mt LSHIFT Z       &kp X    &mt LCTL C &mt LALT V &lt NUM B            &kp N      &kp M     &kp COMMA   &kp DOT    &mt RSHFT FSLH
+&mt LSHIFT Z       &kp X    &mt LCTL C &lt SIN V &lt NUM B            &kp N      &kp M     &kp COMMA   &kp DOT    &mt RSHFT FSLH
 //╰──────────┴──────────┼──────────┼──────────┼─────────╯               ╰─────────┼───────────┼──────────┼──────────┼──────────╯
    &mt LSHIFT UNDER      &kp LGUI        &mt LC(LS(LALT)) BSPC        &mt LC(LS(LALT)) SPACE &mt LG(LC(LS(LALT))) ENTER  &mt RSHIFT MINUS
  //            ╰──────────────┴──────────────┴─────────────────╯    ╰─────────────────────┴───────────────┴───────────────╯
@@ -191,5 +192,20 @@
  //            ╰──────────────┴──────────────┴─────────────────╯              ╰─────────────────────┴───────────────┴───────────────╯
                 >;
         };
+                        sinpad_layer {
+            label = "sin";
+            bindings = <
+//╭──────────┬──────────┬──────────┬──────────┬──────────╮                         ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+   &kp EXCL     &kp AT    &kp HASH  &kp DOLLAR &kp PRCNT                            &kp AMPS     &kp KP_MULTIPLY     &kp LPAR       &none      &none 
+//├──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┤
+  &tdclr &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                        &kp DOLLAR       &kp PRCNT     &kp CARET     &none     &none 
+//├──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┤
+ &rgb_ug RGB_TOG &rgb_ug RGB_EFR &rgb_ug RGB_EFF &rgb_ug RGB_BRI &tdrst             &kp EXCL       &kp AT     &kp HASH     &none      &none 
+ //╰──────────┴──────────┼──────────┼──────────┼─────────╯                         ╰─────────┼───────────┼──────────┼──────────┼──────────╯
+                    &none       &rgb_ug RGB_EFF &rgb_ug RGB_BRD                  &kp RPAR     &kp DOT   &kp ENTER
+ //            ╰──────────────┴──────────────┴─────────────────╯              ╰─────────────────────┴───────────────┴───────────────╯
+                >;
+        };
+
     };
 };
