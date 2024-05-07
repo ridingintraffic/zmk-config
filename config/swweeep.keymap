@@ -190,9 +190,9 @@
 //├──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┤
   &tdclr &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                        &kp N4       &kp N5     &kp N6     &none     &none 
 //├──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┤
- &rgb_ug RGB_TOG &rgb_ug RGB_EFR &rgb_ug RGB_EFF &rgb_ug RGB_BRI &tdrst             &kp N1       &kp N2     &kp N3     &none      &none 
+      &none      &none      &none      &none      &tdrst                             &kp N1       &kp N2     &kp N3     &none      &none 
  //╰──────────┴──────────┼──────────┼──────────┼─────────╯                         ╰─────────┼───────────┼──────────┼──────────┼──────────╯
-                    &none       &rgb_ug RGB_EFF &rgb_ug RGB_BRD                  &kp N0     &kp DOT   &kp ENTER
+                    &none       &none   &none                  &kp N0     &kp DOT   &kp ENTER
  //            ╰──────────────┴──────────────┴─────────────────╯              ╰─────────────────────┴───────────────┴───────────────╯
                 >;
         };
@@ -204,9 +204,9 @@
 //├──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┤
   &tdclr &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                        &kp DOLLAR       &kp PRCNT     &kp CARET     &none     &none 
 //├──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┤
- &rgb_ug RGB_TOG &rgb_ug RGB_EFR &rgb_ug RGB_EFF &rgb_ug RGB_BRI &tdrst             &kp EXCL       &kp AT     &kp HASH     &none      &none 
+      &none      &none      &none      &none     &tdrst                             &kp EXCL       &kp AT     &kp HASH     &none      &none 
  //╰──────────┴──────────┼──────────┼──────────┼─────────╯                         ╰─────────┼───────────┼──────────┼──────────┼──────────╯
-                    &none       &rgb_ug RGB_EFF &rgb_ug RGB_BRD                  &kp RPAR     &kp DOT   &kp ENTER
+                    &none        &none          &none                             &kp RPAR     &kp DOT   &kp ENTER
  //            ╰──────────────┴──────────────┴─────────────────╯              ╰─────────────────────┴───────────────┴───────────────╯
                 >;
         };
