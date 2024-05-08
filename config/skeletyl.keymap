@@ -30,6 +30,9 @@
     quick-tap-ms = <QUICK_TAP>;
 
 };
+&soft_off {
+    hold-time-ms = 5000; // Only turn off it the key is held for 5 seconds or longer.
+};
 
 / {
     behaviors {
@@ -167,7 +170,7 @@
             label = "sin";
             bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────╮                         ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-   &kp EXCL     &kp AT    &kp HASH  &kp DOLLAR &kp PRCNT                            &kp AMPS     &kp KP_MULTIPLY     &kp LPAR       &none      &none 
+   &kp EXCL     &kp AT    &kp HASH  &kp DOLLAR &soft_off                            &kp AMPS     &kp KP_MULTIPLY     &kp LPAR       &none      &none 
 //├──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┤
   &tdclr &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                        &kp DOLLAR       &kp PRCNT     &kp CARET     &none     &none 
 //├──────────┼──────────┼──────────┼──────────┼──────────┤                         ├──────────┼──────────┼──────────┼──────────┼──────────┤
