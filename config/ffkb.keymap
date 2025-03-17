@@ -136,7 +136,7 @@
 
             bindings = <
     &kp GRAVE   &gresc        &none       &none      &kp LBKT   &kp LBRC                                  &kp RBRC   &kp RBKT        &none       &none      &none      &none
-    &kp GRAVE    &kp GRAVE    &none       &none      &none       &none                &trans              &kp LEFT  &kp DOWN    &kp UP      &kp RIGHT  &kp DQT    &trans
+    &kp GRAVE    &kp GRAVE    &none       &none      &none       &none                &trans              &kp LEFT  &kp DOWN    &kp UP      &kp RIGHT  &kp DQT    &kp DQT
     &kp LSHIFT &kp TILDE  &none        &kp LG(LS(LC(N3))) &kp LG(LS(LC(N4)))         &trans                             &kp RBKT  &kp MINUS   &kp EQUAL   &kp SQT    &kp BSLH   &trans
                                         &trans      &kp LCTL  &kp LALT   &kp BSLH                         &kp TAB  &kp EQUAL   &kp PLUS      &trans
             >;
@@ -148,7 +148,7 @@
 
             bindings = <
     &kp TILDE   &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                    &kp N6 &kp N7     &kp N8     &kp N9     &kp N0    &kp EQUAL
-    &kp TILDE   &rgb_ug RGB_TOG &rgb_ug RGB_EFR &rgb_ug RGB_HUI &rgb_ug RGB_BRI   &trans           &kp LEFT  &kp DOWN    &kp UP      &kp RIGHT  &kp SEMI    &trans
+    &kp TILDE   &rgb_ug RGB_TOG &rgb_ug RGB_EFR &rgb_ug RGB_HUI &rgb_ug RGB_BRI   &trans           &kp LEFT  &kp DOWN    &kp UP      &kp RIGHT  &kp SEMI    &kp SEMI 
     &kp LSHIFT  &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_HUD &rgb_ug RGB_BRD    &trans                               &rgb_ug RGB_TOG &rgb_ug RGB_EFR  &rgb_ug RGB_EFF &rgb_ug RGB_BRI &kp SEMI     &trans
                                         &trans      &trans        &kp LALT      &kp BSPC        &kp LC(LEFT)   &kp LC(UP)    &kp LC(RIGHT)      &trans
             >;
