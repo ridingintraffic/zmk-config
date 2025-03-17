@@ -148,7 +148,7 @@
 
             bindings = <
     &kp TILDE   &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                    &kp N6 &kp N7     &kp N8     &kp N9     &kp N0    &kp EQUAL
-    &kp TILDE   &rgb_ug RGB_TOG &rgb_ug RGB_EFR &rgb_ug RGB_HUI &rgb_ug RGB_BRI   &trans           &kp RBRC    &none   &none          &none   &kp COLON    &trans
+    &kp TILDE   &rgb_ug RGB_TOG &rgb_ug RGB_EFR &rgb_ug RGB_HUI &rgb_ug RGB_BRI   &trans           &kp RBRC    &none   &none          &none   &kp SEMI    &trans
     &kp LSHIFT  &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_HUD &rgb_ug RGB_BRD    &trans                               &rgb_ug RGB_TOG &rgb_ug RGB_EFR  &rgb_ug RGB_EFF &rgb_ug RGB_BRI &kp SEMI     &trans
                                         &trans      &trans        &kp LALT      &kp BSPC        &kp LC(LEFT)   &kp LC(UP)    &kp LC(RIGHT)      &trans
             >;
